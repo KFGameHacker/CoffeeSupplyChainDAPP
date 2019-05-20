@@ -8,7 +8,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0x715018a6"
     },
     {
       "constant": true,
@@ -22,7 +23,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x893d20e8"
     },
     {
       "constant": true,
@@ -36,7 +38,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x8f32d59b"
     },
     {
       "constant": false,
@@ -50,13 +53,15 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xf2fde38b"
     },
     {
       "inputs": [],
       "payable": true,
       "stateMutability": "payable",
-      "type": "constructor"
+      "type": "constructor",
+      "signature": "constructor"
     },
     {
       "anonymous": false,
@@ -68,7 +73,8 @@
         }
       ],
       "name": "Harvested",
-      "type": "event"
+      "type": "event",
+      "signature": "0x8e55ccfc9778ff8eba1646d765cf1982537ce0f9257054a17b48aad745250183"
     },
     {
       "anonymous": false,
@@ -80,7 +86,8 @@
         }
       ],
       "name": "Processed",
-      "type": "event"
+      "type": "event",
+      "signature": "0x5afe3b1bf87069693c075da5c22a98d63d1aef98a30dbbe538d0781a98b77ee5"
     },
     {
       "anonymous": false,
@@ -92,7 +99,8 @@
         }
       ],
       "name": "Packed",
-      "type": "event"
+      "type": "event",
+      "signature": "0x9b3b66e2380b690bae22c73ef1428fb0c91e72fe14a4b6defa13035214187aff"
     },
     {
       "anonymous": false,
@@ -104,7 +112,8 @@
         }
       ],
       "name": "ForSale",
-      "type": "event"
+      "type": "event",
+      "signature": "0xa96ae0fc3224ebd79eebfe54bd130cc9cb94416cddd1f2386115e00b72532468"
     },
     {
       "anonymous": false,
@@ -116,7 +125,8 @@
         }
       ],
       "name": "Sold",
-      "type": "event"
+      "type": "event",
+      "signature": "0x92f64ca637d023f354075a4be751b169c1a8a9ccb6d33cdd0cb3520543995727"
     },
     {
       "anonymous": false,
@@ -128,7 +138,8 @@
         }
       ],
       "name": "Shipped",
-      "type": "event"
+      "type": "event",
+      "signature": "0xf00b9a5725b80c54016f42114f6ed7792d22eecb116011c4afac29c57bef6c95"
     },
     {
       "anonymous": false,
@@ -140,7 +151,8 @@
         }
       ],
       "name": "Received",
-      "type": "event"
+      "type": "event",
+      "signature": "0xa8142743f8f70a4c26f3691cf4ed59718381fb2f18070ec52be1f1022d855557"
     },
     {
       "anonymous": false,
@@ -152,7 +164,8 @@
         }
       ],
       "name": "Purchased",
-      "type": "event"
+      "type": "event",
+      "signature": "0x653d56639fee6b566a5c804764e9689de38645f0b733df89a36a1b7b42173dd8"
     },
     {
       "anonymous": false,
@@ -169,7 +182,8 @@
         }
       ],
       "name": "TransferOwnership",
-      "type": "event"
+      "type": "event",
+      "signature": "0x5c486528ec3e3f0ea91181cff8116f02bfa350e03b8b6f12e00765adbb5af85c"
     },
     {
       "constant": false,
@@ -178,7 +192,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0x41c0e1b5"
     },
     {
       "constant": false,
@@ -216,7 +231,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xbdd8a6a8"
     },
     {
       "constant": false,
@@ -230,7 +246,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0x49dae766"
     },
     {
       "constant": false,
@@ -244,7 +261,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xf30fc480"
     },
     {
       "constant": false,
@@ -262,7 +280,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0x2d923561"
     },
     {
       "constant": false,
@@ -276,7 +295,8 @@
       "outputs": [],
       "payable": true,
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xe7fb74c7"
     },
     {
       "constant": false,
@@ -290,7 +310,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xf61c899a"
     },
     {
       "constant": false,
@@ -304,7 +325,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xa26be999"
     },
     {
       "constant": false,
@@ -318,7 +340,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xd38ea5bf"
     },
     {
       "constant": true,
@@ -365,7 +388,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x77c45913"
     },
     {
       "constant": true,
@@ -416,7 +440,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x66225ff9"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_upc\",\"type\":\"uint256\"},{\"name\":\"_price\",\"type\":\"uint256\"}],\"name\":\"sellItem\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"kill\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_upc\",\"type\":\"uint256\"}],\"name\":\"processItem\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_upc\",\"type\":\"uint256\"}],\"name\":\"fetchItemBufferTwo\",\"outputs\":[{\"name\":\"itemSKU\",\"type\":\"uint256\"},{\"name\":\"itemUPC\",\"type\":\"uint256\"},{\"name\":\"productID\",\"type\":\"uint256\"},{\"name\":\"productNotes\",\"type\":\"string\"},{\"name\":\"productPrice\",\"type\":\"uint256\"},{\"name\":\"itemState\",\"type\":\"uint256\"},{\"name\":\"distributorID\",\"type\":\"address\"},{\"name\":\"retailerID\",\"type\":\"address\"},{\"name\":\"consumerID\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_upc\",\"type\":\"uint256\"}],\"name\":\"fetchItemBufferOne\",\"outputs\":[{\"name\":\"itemSKU\",\"type\":\"uint256\"},{\"name\":\"itemUPC\",\"type\":\"uint256\"},{\"name\":\"ownerID\",\"type\":\"address\"},{\"name\":\"originFarmerID\",\"type\":\"address\"},{\"name\":\"originFarmName\",\"type\":\"string\"},{\"name\":\"originFarmInformation\",\"type\":\"string\"},{\"name\":\"originFarmLatitude\",\"type\":\"string\"},{\"name\":\"originFarmLongitude\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_upc\",\"type\":\"uint256\"}],\"name\":\"receiveItem\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_upc\",\"type\":\"uint256\"},{\"name\":\"_originFarmerID\",\"type\":\"address\"},{\"name\":\"_originFarmName\",\"type\":\"string\"},{\"name\":\"_originFarmInformation\",\"type\":\"string\"},{\"name\":\"_originFarmLatitude\",\"type\":\"string\"},{\"name\":\"_originFarmLongitude\",\"type\":\"string\"},{\"name\":\"_productNotes\",\"type\":\"string\"}],\"name\":\"harvestItem\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_upc\",\"type\":\"uint256\"}],\"name\":\"purchaseItem\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_upc\",\"type\":\"uint256\"}],\"name\":\"buyItem\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_upc\",\"type\":\"uint256\"}],\"name\":\"packItem\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_upc\",\"type\":\"uint256\"}],\"name\":\"shipItem\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"upc\",\"type\":\"uint256\"}],\"name\":\"Harvested\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"upc\",\"type\":\"uint256\"}],\"name\":\"Processed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"upc\",\"type\":\"uint256\"}],\"name\":\"Packed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"upc\",\"type\":\"uint256\"}],\"name\":\"ForSale\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"upc\",\"type\":\"uint256\"}],\"name\":\"Sold\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"upc\",\"type\":\"uint256\"}],\"name\":\"Shipped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"upc\",\"type\":\"uint256\"}],\"name\":\"Received\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"upc\",\"type\":\"uint256\"}],\"name\":\"Purchased\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"oldOwner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"TransferOwnership\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{\"getOwner()\":{\"notice\":\"Look up the address of the owner\"},\"isOwner()\":{\"notice\":\"Check if the calling address is the owner of the contract\"},\"renounceOwnership()\":{\"notice\":\"Define a function to renounce ownerhip\"},\"transferOwnership(address)\":{\"notice\":\"Define a public function to transfer ownership\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/kevin/Dropbox/works/dev/udacity-blockchain-developer-nanodegree-Term2/project-6/contracts/coffeebase/SupplyChain.sol\":\"SupplyChain\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/kevin/Dropbox/works/dev/udacity-blockchain-developer-nanodegree-Term2/project-6/contracts/coffeebase/SupplyChain.sol\":{\"keccak256\":\"0x43ad925fafeb410d2daecc6501338208278b684b46b358d2823535945a871182\",\"urls\":[\"bzzr://5ec185716c24a5200bda0aa702b47e9662bdfa812221fea19cc2330e0ac68d80\"]},\"contracts/coffeecore/Ownable.sol\":{\"keccak256\":\"0x877e46f787757b0a4c624198ed908d10e3faaf9d6200b8ac07574fdc2668b8ab\",\"urls\":[\"bzzr://f2965d72d2904e569ef73498c50eb3020e928823b987e2bfa198b182e2b01fe2\"]}},\"version\":1}",
@@ -9270,9 +9295,16 @@
     "name": "solc",
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "1558333986644": {
+      "events": {},
+      "links": {},
+      "address": "0x23E2b13b08a22E9eEe431F862eC7A17aB1E99B98",
+      "transactionHash": "0x9d1672569249cca09f6fb751b71c52cdbdf02983781cbbb1f01a573191272e94"
+    }
+  },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-05-20T06:07:47.332Z",
+  "updatedAt": "2019-05-20T06:33:47.185Z",
   "devdoc": {
     "methods": {}
   },
