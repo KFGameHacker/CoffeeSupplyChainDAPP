@@ -23,14 +23,16 @@ contract SupplyChain is Ownable{
   // Define enum 'State' with the following values:
   enum State 
   { 
-    Harvested,  // 0
-    Processed,  // 1
-    Packed,     // 2
-    ForSale,    // 3
-    Sold,       // 4
-    Shipped,    // 5
-    Received,   // 6
-    Purchased   // 7
+    Planted,    // 0
+    Matured,    // 1
+    Harvested,  // 2
+    Processed,  // 3
+    Packed,     // 4
+    ForSale,    // 5
+    Sold,       // 6
+    Shipped,    // 7
+    Received,   // 8
+    Purchased   // 9
     }
 
   State constant defaultState = State.Harvested;
@@ -55,6 +57,8 @@ contract SupplyChain is Ownable{
   }
 
   // Define 8 events with the same 8 state values and accept 'upc' as input argument
+  event Planted(uint upc);
+  event Matured(uint upc);
   event Harvested(uint upc);
   event Processed(uint upc);
   event Packed(uint upc);
@@ -88,6 +92,18 @@ contract SupplyChain is Ownable{
     uint _price = items[_upc].productPrice;
     uint amountToReturn = msg.value - _price;
     items[_upc].consumerID.transfer(amountToReturn);
+  }
+
+    // Define a modifier that checks if an item.state of a upc is Planted
+  modifier isPlanted(uint _upc) {
+
+    _;
+  }
+
+  // Define a modifier that checks if an item.state of a upc is Matured
+  modifier isMatured(uint _upc) {
+    
+    _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Harvested
@@ -154,8 +170,29 @@ contract SupplyChain is Ownable{
     }
   }
 
+  function plantItem(
+    uint _upc,
+    address _originFarmerID,
+    string memory _originFarmName,
+    string memory _originFarmInformation,
+    string memory _originFarmLatitude,
+    string memory  _originFarmLongitude,
+    string memory _productNotes
+    ) public
+  {
+
+  }
+
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
-  function harvestItem(uint _upc, address _originFarmerID,string memory _originFarmName, string memory _originFarmInformation, string memory _originFarmLatitude, string memory  _originFarmLongitude, string memory _productNotes) public 
+  function harvestItem(
+    uint _upc,
+    address _originFarmerID,
+    string memory _originFarmName,
+    string memory _originFarmInformation,
+    string memory _originFarmLatitude,
+    string memory  _originFarmLongitude,
+    string memory _productNotes
+    ) public 
   {
     // Add the new item as part of Harvest
     
