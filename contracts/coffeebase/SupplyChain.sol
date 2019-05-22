@@ -19,17 +19,17 @@ contract SupplyChain is Ownable{
   // Define a public mapping 'items' that maps the UPC to an Item.
   mapping (uint => Item) items;
 
-  // Define a public mapping 'itemsHistory' that maps the UPC to an array of TxHash, 
+  // Define a public mapping 'itemsHistory' that maps the UPC to an array of TxHash,
   // that track its journey through the supply chain -- to be sent from DApp.
   mapping (uint => string[]) itemsHistory;
-  
+
   // Define enum 'State' with the following values:
-  enum State 
-  { 
+  enum State
+  {
     Planted,    // 0
     Matured,    // 1
     Harvested,  // 2
-    Processed,  // 3hi; 
+    Processed,  // 3
     Packed,     // 4
     ForSale,    // 5
     Sold,       // 6
@@ -88,7 +88,7 @@ contract SupplyChain is Ownable{
     require(msg.value >= _price,"sorry u don't paid enough");
     _;
   }
-  
+
   // Define a modifier that checks the price and refunds the remaining balance
   modifier checkValue(uint _upc) {
     _;
@@ -120,7 +120,7 @@ contract SupplyChain is Ownable{
     require(items[_upc].itemState == State.Processed,"item not processed");
     _;
   }
-  
+
   // Define a modifier that checks if an item.state of a upc is Packed
   modifier packed(uint _upc) {
     require(items[_upc].itemState == State.Packed,"item not packed");
@@ -138,7 +138,7 @@ contract SupplyChain is Ownable{
     require(items[_upc].itemState == State.Sold,"item not sold out");
     _;
   }
-  
+
   // Define a modifier that checks if an item.state of a upc is Shipped
   modifier shipped(uint _upc) {
     require(items[_upc].itemState == State.Shipped,"item not shipped");
@@ -307,7 +307,7 @@ contract SupplyChain is Ownable{
     items[_upc].ownerID = msg.sender;
     items[_upc].retailerID = msg.sender;
     items[_upc].itemState = State.Received;
-    
+
     // Emit the appropriate event
     emit Received(_upc);
   }
@@ -339,7 +339,7 @@ contract SupplyChain is Ownable{
   string memory originFarmInformation,
   string memory originFarmLatitude,
   string memory originFarmLongitude
-  ) 
+  )
   {
   // Assign values to the 8 parameters
   itemSKU = items[_upc].sku;
@@ -364,7 +364,7 @@ contract SupplyChain is Ownable{
   }
 
   // Define a function 'fetchItemBufferTwo' that fetches the data
-  function fetchItemBufferTwo(uint _upc) public view returns 
+  function fetchItemBufferTwo(uint _upc) public view returns
   (
   uint    itemSKU,
   uint    itemUPC,
@@ -375,7 +375,7 @@ contract SupplyChain is Ownable{
   address distributorID,
   address retailerID,
   address consumerID
-  ) 
+  )
   {
     // Assign values to the 9 parameters
   itemSKU = items[_upc].sku;

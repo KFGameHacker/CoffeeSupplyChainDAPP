@@ -929,10 +929,16 @@
       "links": {},
       "address": "0x79051A2faFcC216A55d3897474012145d158F170",
       "transactionHash": "0x6485b227ab3f2e659487d1b4bf01728510afeba1cd4b4827362f73ed2b920a6e"
+    },
+    "1558509659494": {
+      "events": {},
+      "links": {},
+      "address": "0x79051A2faFcC216A55d3897474012145d158F170",
+      "transactionHash": "0x6485b227ab3f2e659487d1b4bf01728510afeba1cd4b4827362f73ed2b920a6e"
     }
   },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-05-20T06:33:47.162Z",
+  "updatedAt": "2019-05-22T07:22:06.609Z",
   "devdoc": {
     "methods": {}
   },
