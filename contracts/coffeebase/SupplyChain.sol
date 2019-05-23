@@ -187,6 +187,7 @@ contract SupplyChain is Ownable{
     verifyCaller(owner)
   {
     // add the new item as part of planted
+    items[_upc].upc = _upc;
     items[_upc].itemState = State.Harvested;
     items[_upc].originFarmerID = _originFarmerID;
     items[_upc].originFarmName = _originFarmName;
