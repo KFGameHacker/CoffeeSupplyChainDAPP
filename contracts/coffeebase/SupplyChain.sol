@@ -79,7 +79,7 @@ contract SupplyChain is Ownable{
 
   // Define a modifer that verifies the Caller
   modifier verifyCaller (address _address) {
-    require(msg.sender == _address,'message sender is not the address');
+    require(msg.sender == _address,'message sender is not right');
     _;
   }
 
