@@ -56,7 +56,9 @@ contract('SupplyChain', function(accounts) {
             eventEmitted = true;
         });
 
+        //mark an item as planted by calling plantItem() function
         let result = await supplyChain.plantItem(upc,originFarmerID,originFarmName,originFarmInformation,originFarmLatitude,originFarmLongitude,productNotes);
+        
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc)
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
@@ -84,7 +86,7 @@ contract('SupplyChain', function(accounts) {
             eventEmitted = true;
         });
 
-        // Mark an item as Processed by calling function processtItem()
+        // Mark an item as Processed by calling function growItem()
         let result = await supplyChain.growItem(upc,{from:originFarmerID});
 
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
@@ -121,25 +123,29 @@ contract('SupplyChain', function(accounts) {
     })    
 
     it("Testing smart contract function processItem() that allows a farmer to process coffee", async() => {
-        
-        
         // Declare and Initialize a variable for event
-        
-        
-        // Watch the emitted event Processed()
-        
+        var eventEmitted = false;
 
-        // Mark an item as Processed by calling function processtItem()
-        
+        // Watch the emitted event Harvested()
+        await supplyChain.Processed((err, res) => {
+            eventEmitted = true;
+        })
+
+        // Mark an item as Harvested by calling function harvestItem()
+        //await supplyChain.harvestItem(upc, originFarmerID, originFarmName, originFarmInformation, originFarmLatitude, originFarmLongitude, productNotes)
+        await supplyChain.processItem(upc,{from:originFarmerID});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-        
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
 
-        // Verify the result set
-        
+        //verify the state
+        assert.equal(resultBufferTwo['itemState'], 3, 'Error: Invalid item State')
+
+        //verify the event is emitted
+        assert.equal(eventEmitted, true, 'Invalid event emitted')
     })    
 
-    it("Testing smart contract function packItem() that allows a farmer to pack coffee", async() => {
+    it.skip("Testing smart contract function packItem() that allows a farmer to pack coffee", async() => {
         
         
         // Declare and Initialize a variable for event
@@ -158,7 +164,7 @@ contract('SupplyChain', function(accounts) {
         
     })
 
-    it("Testing smart contract function sellItem() that allows a farmer to sell coffee", async() => {
+    it.skip("Testing smart contract function sellItem() that allows a farmer to sell coffee", async() => {
         
         
         // Declare and Initialize a variable for event
@@ -177,7 +183,7 @@ contract('SupplyChain', function(accounts) {
           
     })    
 
-    it("Testing smart contract function buyItem() that allows a distributor to buy coffee", async() => {
+    it.skip("Testing smart contract function buyItem() that allows a distributor to buy coffee", async() => {
         
         
         // Declare and Initialize a variable for event
@@ -197,7 +203,7 @@ contract('SupplyChain', function(accounts) {
         
     })    
 
-    it("Testing smart contract function shipItem() that allows a distributor to ship coffee", async() => {
+    it.skip("Testing smart contract function shipItem() that allows a distributor to ship coffee", async() => {
         
         
         // Declare and Initialize a variable for event
@@ -217,7 +223,7 @@ contract('SupplyChain', function(accounts) {
     })    
 
 
-    it("Testing smart contract function receiveItem() that allows a retailer to mark coffee received", async() => {
+    it.skip("Testing smart contract function receiveItem() that allows a retailer to mark coffee received", async() => {
         
         
         // Declare and Initialize a variable for event
@@ -237,7 +243,7 @@ contract('SupplyChain', function(accounts) {
     })  
 
 
-    it("Testing smart contract function purchaseItem() that allows a consumer to purchase coffee", async() => {
+    it.skip("Testing smart contract function purchaseItem() that allows a consumer to purchase coffee", async() => {
         
         
         // Declare and Initialize a variable for event
@@ -257,7 +263,7 @@ contract('SupplyChain', function(accounts) {
     })  
 
 
-    it("Testing smart contract function fetchItemBufferOne() that allows anyone to fetch item details from blockchain", async() => {
+    it.skip("Testing smart contract function fetchItemBufferOne() that allows anyone to fetch item details from blockchain", async() => {
         
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         
@@ -267,7 +273,7 @@ contract('SupplyChain', function(accounts) {
     })
 
 
-    it("Testing smart contract function fetchItemBufferTwo() that allows anyone to fetch item details from blockchain", async() => {
+    it.skip("Testing smart contract function fetchItemBufferTwo() that allows anyone to fetch item details from blockchain", async() => {
         
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
