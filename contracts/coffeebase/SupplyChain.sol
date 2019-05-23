@@ -230,9 +230,11 @@ contract SupplyChain is Ownable{
   {
     // Update the appropriate fields
     items[_upc].itemState = State.Harvested;
+    items[_upc].sku = sku;
 
     // Increment sku
     sku = sku + 1;
+
     // Emit the appropriate event
     emit Harvested(_upc);
   }
