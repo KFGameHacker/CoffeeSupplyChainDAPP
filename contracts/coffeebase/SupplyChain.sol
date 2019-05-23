@@ -188,7 +188,7 @@ contract SupplyChain is Ownable{
   {
     // add the new item as part of planted
     items[_upc].upc = _upc;
-    items[_upc].itemState = State.Harvested;
+    items[_upc].itemState = State.Planted;
     items[_upc].originFarmerID = _originFarmerID;
     items[_upc].originFarmName = _originFarmName;
     items[_upc].originFarmInformation = _originFarmInformation;
