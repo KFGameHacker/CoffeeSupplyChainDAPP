@@ -48,7 +48,7 @@ contract('SupplyChain', function(accounts) {
     console.log("Retailer: accounts[3] ", accounts[3])
     console.log("Consumer: accounts[4] ", accounts[4])
 
-    it.only("Testing smart contract function plantItem() that allows a farmer to harvest coffee", async() => {
+    it("Testing smart contract function plantItem() that allows a farmer to harvest coffee", async() => {
         let eventEmitted = false;
 
         //watch the event Planted
@@ -105,7 +105,6 @@ contract('SupplyChain', function(accounts) {
         assert.equal(eventEmitted, true, 'Invalid event emitted')
     })    
 
-    // 2nd Test
     it("Testing smart contract function processItem() that allows a farmer to process coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
         
@@ -125,7 +124,6 @@ contract('SupplyChain', function(accounts) {
         
     })    
 
-    // 3rd Test
     it("Testing smart contract function packItem() that allows a farmer to pack coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
         
@@ -143,9 +141,8 @@ contract('SupplyChain', function(accounts) {
 
         // Verify the result set
         
-    })    
+    })
 
-    // 4th Test
     it("Testing smart contract function sellItem() that allows a farmer to sell coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
         
@@ -165,7 +162,6 @@ contract('SupplyChain', function(accounts) {
           
     })    
 
-    // 5th Test
     it("Testing smart contract function buyItem() that allows a distributor to buy coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
         
@@ -186,7 +182,6 @@ contract('SupplyChain', function(accounts) {
         
     })    
 
-    // 6th Test
     it("Testing smart contract function shipItem() that allows a distributor to ship coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
         
@@ -206,7 +201,7 @@ contract('SupplyChain', function(accounts) {
               
     })    
 
-    // 7th Test
+
     it("Testing smart contract function receiveItem() that allows a retailer to mark coffee received", async() => {
         const supplyChain = await SupplyChain.deployed()
         
@@ -224,9 +219,9 @@ contract('SupplyChain', function(accounts) {
 
         // Verify the result set
              
-    })    
+    })  
 
-    // 8th Test
+
     it("Testing smart contract function purchaseItem() that allows a consumer to purchase coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
         
@@ -244,9 +239,9 @@ contract('SupplyChain', function(accounts) {
 
         // Verify the result set
         
-    })    
+    })  
 
-    // 9th Test
+
     it("Testing smart contract function fetchItemBufferOne() that allows anyone to fetch item details from blockchain", async() => {
         const supplyChain = await SupplyChain.deployed()
 
@@ -257,7 +252,7 @@ contract('SupplyChain', function(accounts) {
         
     })
 
-    // 10th Test
+
     it("Testing smart contract function fetchItemBufferTwo() that allows anyone to fetch item details from blockchain", async() => {
         const supplyChain = await SupplyChain.deployed()
 

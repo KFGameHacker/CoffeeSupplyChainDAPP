@@ -203,6 +203,22 @@ contract SupplyChain is Ownable{
     emit Planted(_upc);
   }
 
+  //Define a function 'growItem' that allows a farmer to mark an item 'Matured'
+  function growItem(
+    uint _upc
+  ) public
+  //Call modifier to verify is planted of this plant(coffee tree)
+  isPlanted(_upc)
+  // Call modifier to verify caller of this function
+  verifyCaller(items[_upc].originFarmerID)
+  {
+    // Update the appropriate fields
+    items[_upc].itemState = State.Matured;
+
+    //emit the event
+    emit Matured(_upc);
+  }
+
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
   function harvestItem(
     uint _upc
@@ -212,7 +228,7 @@ contract SupplyChain is Ownable{
     // Call modifier to verify caller of this function
     verifyCaller(items[_upc].originFarmerID)
   {
-    // Add the new item as part of Harvest
+    // Update the appropriate fields
     items[_upc].itemState = State.Harvested;
 
     // Increment sku
