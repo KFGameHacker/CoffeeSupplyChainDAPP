@@ -25,7 +25,7 @@ contract('SupplyChain', function(accounts) {
 
     before(async ()=>{
         supplyChain = await SupplyChain.deployed()
-        console.log("SupplyChain Contract deployed at: "+supplyChain.address);
+        console.log("\nSupplyChain Contract deployed at: "+supplyChain.address);
     });
 
     ///Available Accounts
@@ -61,20 +61,17 @@ contract('SupplyChain', function(accounts) {
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc)
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
 
-        console.log(resultBufferOne);
-        console.log(resultBufferTwo);
-
         //farm info verification
         assert.equal(resultBufferOne['itemUPC'], upc, 'Error: Invalid item UPC')
         assert.equal(resultBufferOne['originFarmName'], originFarmName, 'Error: Missing or Invalid originFarmName')
-        assert.equal(resultBufferOne['originFarmerID:'], originFarmerID, 'Error: Missing or Invalid ownerID')
+        assert.equal(resultBufferOne['originFarmerID'], originFarmerID, 'Error: Missing or Invalid ownerID')
         assert.equal(resultBufferOne['originFarmInformation'], originFarmInformation, 'Error: Missing or Invalid originFarmInformation')
         assert.equal(resultBufferOne['originFarmLatitude'], originFarmLatitude, 'Error: Missing or Invalid originFarmLatitude')
         assert.equal(resultBufferOne['originFarmLongitude'], originFarmLongitude, 'Error: Missing or Invalid originFarmLongitude')       
         
         //item state verification
-        //assert.equal(resultBufferTwo[''], 0, 'Error: Invalid item State')
-        //assert.equal(eventEmitted, true, 'Invalid event emitted')
+        assert.equal(resultBufferTwo['itemState'].toString(), 0, 'Error: Invalid item State')
+        assert.equal(eventEmitted, true, 'Invalid event emitted')
     });
 
     // 1st Testv 
