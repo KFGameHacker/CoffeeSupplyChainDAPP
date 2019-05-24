@@ -299,13 +299,20 @@ contract('SupplyChain', function(accounts) {
     })  
 
 
-    it.skip("Testing smart contract function fetchItemBufferOne() that allows anyone to fetch item details from blockchain", async() => {
+    it("Testing smart contract function fetchItemBufferOne() that allows anyone to fetch item details from blockchain", async() => {
         
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc);
         
         // Verify the result set:
-        //assert.equal(resultBufferOne[]);
+        assert.equal(resultBufferOne['itemSKU'],sku,'Error: Invalid item sku');
+        assert.equal(resultBufferOne['itemUPC'],upc,'Error: Invalid item upc');
+        assert.equal(resultBufferOne['ownerID'],consumerID,'Error: Invalid item ownerID');
+        assert.equal(resultBufferOne['originFarmerID'],originFarmerID,'Error: Invalid item originFarmerID');
+        assert.equal(resultBufferOne['originFarmName'],originFarmName,'Error: Invalid item originFarmName');
+        assert.equal(resultBufferOne['originFarmInformation'],originFarmInformation,'Error: Invalid item originFarmInformation');
+        assert.equal(resultBufferOne['originFarmLatitude'],originFarmLatitude,'Error: Invalid item originFarmLatitude');
+        assert.equal(resultBufferOne['originFarmLongitude'],originFarmLongitude,'Error: Invalid item originFarmLongitude');
     })
 
 
