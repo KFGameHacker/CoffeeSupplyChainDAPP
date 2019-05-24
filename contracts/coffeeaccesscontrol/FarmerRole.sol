@@ -22,7 +22,7 @@ contract FarmerRole is SupplyChain{
 
   // Define a modifier that checks to see if msg.sender has the appropriate role
   modifier onlyFarmer() {
-    require(isFarmer(msg.sender),'sorry, message sender is not the farmer');
+    require(isFarmer(msg.sender),'sorry, message sender is not a farmer');
     _;
   }
 
