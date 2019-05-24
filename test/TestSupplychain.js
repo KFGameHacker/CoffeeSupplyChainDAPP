@@ -220,23 +220,26 @@ contract('SupplyChain', function(accounts) {
         //assert.equal(refunded, false, 'Invalid event emitted: overpaid refunded')
     })
 
-    it.skip("Testing smart contract function shipItem() that allows a distributor to ship coffee", async() => {
-        
-        
+    it("Testing smart contract function shipItem() that allows a distributor to ship coffee", async() => {
         // Declare and Initialize a variable for event
-        
-        
-        // Watch the emitted event Shipped()
-        
+        let eventEmitted = false;
 
-        // Mark an item as Sold by calling function buyItem()
-        
+        // Watch the emitted event Packed()
+        await supplyChain.Shipped((err, res) => {
+            eventEmitted = true;
+        })
+
+        // Mark an item as Packed by calling function packItem()
+        let result = await supplyChain.shipItem(upc,{from:originFarmerID});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-        
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
 
-        // Verify the result set
-              
+        //verify the state
+        assert.equal(resultBufferTwo['itemState'], 7, 'Error: Invalid item State')
+
+        //verify the event is emitted
+        assert.equal(eventEmitted, true, 'Invalid event emitted')
     })    
 
 
