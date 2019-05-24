@@ -338,7 +338,7 @@ contract SupplyChain is Ownable{
   // Use the above modifiers to check if the item is received
   function purchaseItem(uint _upc) public
     // Call modifier to check if upc has passed previous supply chain stage
-    purchased(_upc)
+    received(_upc)
     // Access Control List enforced by calling Smart Contract / DApp
     //need to check consumer ID here
     {
