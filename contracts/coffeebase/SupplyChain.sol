@@ -71,6 +71,9 @@ contract SupplyChain is Ownable{
   event Received(uint upc);
   event Purchased(uint upc);
 
+  // Define a event to check is user over paid
+  event Refund(uint overpaidAmount);
+
   // Define a modifer that checks to see if msg.sender == owner of the contract
   modifier onlyOwner() {
     require(msg.sender == owner,"message sender is not the owner");
@@ -85,16 +88,16 @@ contract SupplyChain is Ownable{
 
   // Define a modifier that checks if the paid amount is sufficient to cover the price
   modifier paidEnough(uint _price) {
-    require(msg.value >= _price,"sorry u don't paid enough");
+    require(
+      msg.value >= _price,
+      "sorry u don't paid enough"
+    );
     _;
-  }
-
-  // Define a modifier that checks the price and refunds the remaining balance
-  modifier checkValue(uint _upc) {
-    _;
-    uint _price = items[_upc].productPrice;
-    uint amountToReturn = msg.value - _price;
-    items[_upc].consumerID.transfer(amountToReturn);
+    //transfer money back if over paid
+    if(msg.value > _price){
+      msg.sender.transfer(msg.value - _price);
+      emit Refund(msg.value - _price);
+    }
   }
 
     // Define a modifier that checks if an item.state of a upc is Planted
@@ -287,9 +290,9 @@ contract SupplyChain is Ownable{
     // Call modifier to check if upc has passed previous supply chain stage
     forSale(_upc)
     // Call modifer to check if buyer has paid enough
-    paidEnough(_upc)
+    paidEnough(msg.value)
     // Call modifer to send any excess ether back to buyer
-    checkValue(msg.value)
+    //checkValue(msg.value,items[_upc].distributorID)
     {
     // Update the appropriate fields - ownerID, distributorID, itemState
     items[_upc].ownerID = msg.sender;

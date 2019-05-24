@@ -132,7 +132,7 @@ contract('SupplyChain', function(accounts) {
             eventEmitted = true;
         })
 
-        // Mark an item as Harvested by calling function processItem()
+        // Mark an item as processed by calling function processItem()
         let result = await supplyChain.processItem(upc,{from:originFarmerID});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
@@ -154,8 +154,7 @@ contract('SupplyChain', function(accounts) {
             eventEmitted = true;
         })
 
-        // Mark an item as Harvested by calling function packItem()
-        
+        // Mark an item as Packed by calling function packItem()
         let result = await supplyChain.packItem(upc,{from:originFarmerID});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
@@ -177,8 +176,7 @@ contract('SupplyChain', function(accounts) {
             eventEmitted = true;
         })
 
-        // Mark an item as Harvested by calling function packItem()
-        
+        // Mark an item as ForSale by calling function sellItem()
         let result = await supplyChain.sellItem(upc,productPrice,{from:originFarmerID});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
@@ -192,25 +190,47 @@ contract('SupplyChain', function(accounts) {
         assert.equal(eventEmitted, true, 'Invalid event emitted')
     })    
 
-    it.skip("Testing smart contract function buyItem() that allows a distributor to buy coffee", async() => {
-        
-        
+    it("Testing smart contract function buyItem() that allows a distributor to buy coffee", async() => {
         // Declare and Initialize a variable for event
-        
-        
-        // Watch the emitted event Sold()
-        var event = supplyChain.Sold()
-        
+        let eventEmitted = false;
+        let refunded = false;
+
+        // Watch the emitted event Packed()
+        await supplyChain.Sold((err, res) => {
+            if(err){
+                console.log(err);
+            }else{
+                console.log(res);
+                eventEmitted = true;
+            }
+        })
+
+        // await supplyChain.Refund((err,res)=>{
+        //     if(err){
+        //         console.log(err);
+        //     }else{
+        //         console.log(res);
+        //         refunded = true;
+        //     }
+        // });
 
         // Mark an item as Sold by calling function buyItem()
         
-
+        let result = await supplyChain.buyItem(upc,{from:distributorID,value:web3.utils.toWei('1','ether')});
+        //console.log(result);
+        console.log(refunded);
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-        
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
+        //console.log(resultBufferTwo);
 
-        // Verify the result set
-        
-    })    
+        //verify the state
+        assert.equal(resultBufferTwo['itemState'], 6, 'Error: Invalid item State')
+
+        //verify the event is emitted
+        assert.equal(eventEmitted, true, 'Invalid event emitted')
+        //assert.equal(refunded, true, 'Invalid event emitted: overpaid not refunded')
+        assert.equal(refunded, false, 'Invalid event emitted: overpaid refunded')
+    })
 
     it.skip("Testing smart contract function shipItem() that allows a distributor to ship coffee", async() => {
         
