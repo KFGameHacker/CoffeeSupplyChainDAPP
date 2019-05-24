@@ -224,12 +224,12 @@ contract('SupplyChain', function(accounts) {
         // Declare and Initialize a variable for event
         let eventEmitted = false;
 
-        // Watch the emitted event Packed()
+        // Watch the emitted event Shipped()
         await supplyChain.Shipped((err, res) => {
             eventEmitted = true;
         })
 
-        // Mark an item as Packed by calling function packItem()
+        // Mark an item as shipped by calling function packshipItemItem()
         let result = await supplyChain.shipItem(upc,{from:originFarmerID});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
@@ -243,23 +243,30 @@ contract('SupplyChain', function(accounts) {
     })    
 
 
-    it.skip("Testing smart contract function receiveItem() that allows a retailer to mark coffee received", async() => {
-        
-        
+    it("Testing smart contract function receiveItem() that allows a retailer to mark coffee received", async() => {
         // Declare and Initialize a variable for event
-        
-        
-        // Watch the emitted event Received()
-        
+        let eventEmitted = false;
 
-        // Mark an item as Sold by calling function buyItem()
-        
+        // Watch the emitted event Received()
+        await supplyChain.Received((err, res) => {
+            eventEmitted = true;
+        })
+
+        // Mark an item as shipped by calling function packshipItemItem()
+        let result = await supplyChain.receiveItem(upc,{from:retailerID});
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-        
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
+        const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc)
+        console.log(resultBufferOne);
 
-        // Verify the result set
-             
+        //verify the state
+        assert.equal(resultBufferTwo['itemState'], 8, 'Error: Invalid item State')
+        assert.equal(resultBufferOne['ownerID'], retailerID, 'Error: Invalid item ownerID')
+        assert.equal(resultBufferTwo['retailerID'], retailerID, 'Error: Invalid item retailerID')
+
+        //verify the event is emitted
+        assert.equal(eventEmitted, true, 'Invalid event emitted')
     })  
 
 
