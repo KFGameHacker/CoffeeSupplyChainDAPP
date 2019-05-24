@@ -252,6 +252,7 @@ contract SupplyChain is Ownable{
   {
     // Update the appropriate fields
     items[_upc].itemState = State.Processed;
+    items[_upc].productID = items[_upc].sku + items[_upc].upc;
     // Emit the appropriate event
     emit Processed(_upc);
   }

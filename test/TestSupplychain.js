@@ -300,7 +300,7 @@ contract('SupplyChain', function(accounts) {
 
 
     it("Testing smart contract function fetchItemBufferOne() that allows anyone to fetch item details from blockchain", async() => {
-        
+       
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc);
         
@@ -316,14 +316,20 @@ contract('SupplyChain', function(accounts) {
     })
 
 
-    it.skip("Testing smart contract function fetchItemBufferTwo() that allows anyone to fetch item details from blockchain", async() => {
-        
-
+    it("Testing smart contract function fetchItemBufferTwo() that allows anyone to fetch item details from blockchain", async() => {
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
-        
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc);
         
         // Verify the result set:
-        
+        assert.equal(resultBufferTwo['itemSKU'],sku,'Error: Invalid item sku');
+        assert.equal(resultBufferTwo['itemUPC'],upc,'Error: Invalid item upc');
+        assert.equal(resultBufferTwo['productID'],productID,'Error: Invalid item productID');
+        assert.equal(resultBufferTwo['productNotes'],productNotes,'Error: Invalid item productNotes');
+        assert.equal(resultBufferTwo['productPrice'],productPrice,'Error: Invalid item productPrice');
+        assert.equal(resultBufferTwo['itemState'],9,'Error: Invalid item state');
+        assert.equal(resultBufferTwo['distributorID'],distributorID,'Error: Invalid item distributorID');
+        assert.equal(resultBufferTwo['retailerID'],retailerID,'Error: Invalid item retailerID');
+        assert.equal(resultBufferTwo['consumerID'],consumerID,'Error: Invalid item consumerID');
     })
 
 });
