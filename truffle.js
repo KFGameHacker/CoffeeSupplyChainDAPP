@@ -15,5 +15,9 @@ module.exports = {
       provider: new HDWalletProvider(mnemonic, "https://ropsten.infura.io/"+infuraKey),
       network_id: "*",
     },
+    rinkeby: {
+      provider: new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/"+infuraKey),
+      network_id: "*",
+    },
   }
 };
