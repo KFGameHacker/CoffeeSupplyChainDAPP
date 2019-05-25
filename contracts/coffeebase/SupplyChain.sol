@@ -1,8 +1,12 @@
 pragma solidity ^0.5.0;
 import 'contracts/coffeecore/Ownable.sol';
+import 'contracts/coffeeaccesscontrol/ConsumerRole.sol';
+import 'contracts/coffeeaccesscontrol/DistributorRole.sol';
+import 'contracts/coffeeaccesscontrol/FarmerRole.sol';
+import 'contracts/coffeeaccesscontrol/RetailerRole.sol';
 
 // Define a contract 'Supplychain'
-contract SupplyChain is Ownable{
+contract SupplyChain is Ownable,FarmerRole,DistributorRole,RetailerRole,ConsumerRole{
 
   // Define 'owner'
   address payable owner;
@@ -163,8 +167,8 @@ contract SupplyChain is Ownable{
   // In the constructor set 'owner' to the address that instantiated the contract
   // and set 'sku' to 1
   // and set 'upc' to 1
-  constructor() public payable {
-    owner = msg.sender;
+  constructor() public payable FarmerRole() DistributorRole() RetailerRole() ConsumerRole() Ownable() {
+    //owner = msg.sender;
     sku = 1;
     upc = 1;
   }
