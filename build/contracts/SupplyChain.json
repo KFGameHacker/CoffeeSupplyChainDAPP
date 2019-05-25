@@ -25824,10 +25824,16 @@
       "links": {},
       "address": "0x8daB2373956745C272c03A7983E6Eb5909e59cC5",
       "transactionHash": "0x59b45b6a2fa4750068aad70c6b41104f9be284dd34661ce1f141db77ca9edb2a"
+    },
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x6a3e23889C84cDb8Eeaf7226cCCF9aAdDD11b956",
+      "transactionHash": "0xaf267c5c503bed33572acef127f1ff87e3493627f693b44a016c288292a01d91"
     }
   },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-05-25T12:23:14.361Z",
+  "updatedAt": "2019-05-25T14:32:47.483Z",
   "devdoc": {
     "methods": {}
   },

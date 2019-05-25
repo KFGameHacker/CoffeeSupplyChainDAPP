@@ -358,7 +358,7 @@ contract('SupplyChain', function(accounts) {
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc);
 
-        console.log(resultBufferOne);
+        //console.log(resultBufferOne);
         
         // Verify the result set:
         assert.equal(resultBufferOne['itemSKU'],sku,'Error: Invalid item sku');
@@ -376,7 +376,7 @@ contract('SupplyChain', function(accounts) {
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc);
 
-        console.log(resultBufferTwo)
+        //console.log(resultBufferTwo)
         
         // Verify the result set:
         assert.equal(resultBufferTwo['itemSKU'],sku,'Error: Invalid item sku');
