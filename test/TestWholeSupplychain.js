@@ -18,6 +18,7 @@ contract('SupplyChain', function(accounts) {
     const productNotes = "Best beans for Espresso"
     const productPrice = web3.utils.toWei('1', "ether")
     var itemState = 0
+    
     const distributorID = accounts[2]
     const retailerID = accounts[3]
     const consumerID = accounts[4]
@@ -27,7 +28,7 @@ contract('SupplyChain', function(accounts) {
     //deploy contract before test
     before(async ()=>{
         //supplyChain = await SupplyChain.deployed()
-        supplyChain = await SupplyChain.at('0x6ccb74f73f4F518e7b60c017fD4b0956AeE7C138')
+        supplyChain = await SupplyChain.deployed()
         console.log("\nSupplyChain Contract deployed at: "+supplyChain.address+"\n");
     });
 
@@ -51,6 +52,18 @@ contract('SupplyChain', function(accounts) {
     console.log("Retailer: accounts[3] ", accounts[3])
     console.log("Consumer: accounts[4] ", accounts[4])
 
+    it("should add 4 new roles success",async() =>{
+        await supplyChain.addFarmer(originFarmerID);
+        await supplyChain.addDistributor(distributorID);
+        await supplyChain.addRetailer(retailerID);
+        await supplyChain.addConsumer(consumerID);
+
+        assert.equal(await supplyChain.isFarmer(originFarmerID),true,'Error: add new farmer failed');
+        assert.equal(await supplyChain.isDistributor(distributorID),true,'Error: add new Distributor failed');
+        assert.equal(await supplyChain.isRetailer(retailerID),true,'Error: add new Retailer failed');
+        assert.equal(await supplyChain.isConsumer(consumerID),true,'Error: add new Consumer failed');
+    });
+
     it("Testing smart contract function plantItem() that allows a farmer to harvest coffee", async() => {
         let eventEmitted = false;
 
@@ -60,7 +73,7 @@ contract('SupplyChain', function(accounts) {
         });
 
         //mark an item as planted by calling plantItem() function
-        let result = await supplyChain.plantItem(upc,originFarmerID,originFarmName,originFarmInformation,originFarmLatitude,originFarmLongitude,productNotes,{from:ownerID});
+        let result = await supplyChain.plantItem(upc,originFarmerID,originFarmName,originFarmInformation,originFarmLatitude,originFarmLongitude,productNotes,{from:originFarmerID});
         
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc)
@@ -192,6 +205,20 @@ contract('SupplyChain', function(accounts) {
         assert.equal(eventEmitted, true, 'Invalid event emitted')
     })    
 
+    it("should failed when a stranger who isn't a distributor try to buy item", async() => {
+        let failed = true;
+
+        try{
+            let result = await supplyChain.buyItem(upc,{from:accounts[8],value:web3.utils.toWei('1','ether')});
+            failed = false;
+        }catch(err){
+            failed = true;
+        }
+
+        //verify the event is emitted
+        assert.equal(failed, true, 'Error: stranger should buy item failed!')
+    })
+
     it("Testing smart contract function buyItem() that allows a distributor to buy coffee", async() => {
         // Declare and Initialize a variable for event
         let eventEmitted = false;
@@ -207,7 +234,7 @@ contract('SupplyChain', function(accounts) {
         });
 
         // Mark an item as Sold by calling function buyItem()
-        let result = await supplyChain.buyItem(upc,{from:distributorID,value:web3.utils.toWei('1.1','ether')});
+        let result = await supplyChain.buyItem(upc,{from:distributorID,value:web3.utils.toWei('1.5','ether')});
         
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
@@ -247,6 +274,19 @@ contract('SupplyChain', function(accounts) {
         assert.equal(eventEmitted, true, 'Invalid event emitted')
     })    
 
+    it("should failed when a stranger who isn't a retailer try to receive item", async() => {
+        let failed = true;
+
+        try{
+            let result = await supplyChain.receiveItem(upc,{from:accounts[8]});
+            failed = false;
+        }catch(err){
+            failed = true;
+        }
+
+        //verify the event is emitted
+        assert.equal(failed, true, 'Error: stranger should buy item failed!')
+    })
 
     it("Testing smart contract function receiveItem() that allows a retailer to mark coffee received", async() => {
         // Declare and Initialize a variable for event
@@ -273,6 +313,19 @@ contract('SupplyChain', function(accounts) {
         assert.equal(eventEmitted, true, 'Invalid event emitted')
     })  
 
+    it("should failed when a stranger who isn't a consumer try to purchase item", async() => {
+        let failed = true;
+
+        try{
+            let result = await supplyChain.purchaseItem(upc,{from:accounts[8]});
+            failed = false;
+        }catch(err){
+            failed = true;
+        }
+
+        //verify the event is emitted
+        assert.equal(failed, true, 'Error: stranger should buy item failed!')
+    })
 
     it("Testing smart contract function purchaseItem() that allows a consumer to purchase coffee", async() => {
         // Declare and Initialize a variable for event

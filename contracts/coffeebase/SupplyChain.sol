@@ -303,7 +303,7 @@ contract SupplyChain is Ownable,FarmerRole,DistributorRole,RetailerRole,Consumer
     paidEnough(msg.value)
     // Call modifer to send any excess ether back to buyer
     //checkValue(msg.value,items[_upc].distributorID)
-    onlyConsumer()
+    onlyDistributor()
     {
     // Update the appropriate fields - ownerID, distributorID, itemState
     items[_upc].ownerID = msg.sender;
