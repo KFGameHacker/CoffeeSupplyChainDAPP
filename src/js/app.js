@@ -131,36 +131,78 @@ App = {
 
         switch(processId) {
             case 1:
-                return await App.harvestItem(event);
+                return await App.plantItem(event);
                 break;
             case 2:
-                return await App.processItem(event);
+                return await App.growItem(event);
                 break;
             case 3:
-                return await App.packItem(event);
+                return await App.harvestItem(event);
                 break;
             case 4:
-                return await App.sellItem(event);
+                return await App.processItem(event);
                 break;
             case 5:
-                return await App.buyItem(event);
+                return await App.packItem(event);
                 break;
             case 6:
-                return await App.shipItem(event);
+                return await App.sellItem(event);
                 break;
             case 7:
-                return await App.receiveItem(event);
+                return await App.buyItem(event);
                 break;
             case 8:
-                return await App.purchaseItem(event);
+                return await App.shipItem(event);
                 break;
             case 9:
-                return await App.fetchItemBufferOne(event);
+                return await App.receiveItem(event);
                 break;
             case 10:
+                return await App.purchaseItem(event);
+                break;
+            case 11:
+                return await App.fetchItemBufferOne(event);
+                break;
+            case 12:
                 return await App.fetchItemBufferTwo(event);
                 break;
             }
+    },
+
+    plantItem: function(event) {
+        event.preventDefault();
+        var processId = parseInt($(event.target).data('id'));
+
+        App.contracts.SupplyChain.deployed().then(function(instance) {
+            return instance.plantItem(
+                App.upc,
+                App.metamaskAccountID, 
+                App.originFarmName, 
+                App.originFarmInformation, 
+                App.originFarmLatitude, 
+                App.originFarmLongitude, 
+                App.productNotes
+            );
+        }).then(function(result) {
+            $("#ftc-item").text(result);
+            console.log('plantItem',result);
+        }).catch(function(err) {
+            console.log(err.message);
+        });
+    },
+
+    growItem: function (event) {
+        event.preventDefault();
+        var processId = parseInt($(event.target).data('id'));
+
+        App.contracts.SupplyChain.deployed().then(function(instance) {
+            return instance.growItem(App.upc, {from: App.metamaskAccountID});
+        }).then(function(result) {
+            $("#ftc-item").text(result);
+            console.log('growItem',result);
+        }).catch(function(err) {
+            console.log(err.message);
+        });
     },
 
     harvestItem: function(event) {
@@ -169,13 +211,7 @@ App = {
 
         App.contracts.SupplyChain.deployed().then(function(instance) {
             return instance.harvestItem(
-                App.upc, 
-                App.metamaskAccountID, 
-                App.originFarmName, 
-                App.originFarmInformation, 
-                App.originFarmLatitude, 
-                App.originFarmLongitude, 
-                App.productNotes
+                App.upc,{from: App.metamaskAccountID}
             );
         }).then(function(result) {
             $("#ftc-item").text(result);
