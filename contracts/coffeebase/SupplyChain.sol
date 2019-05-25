@@ -190,8 +190,8 @@ contract SupplyChain is Ownable,FarmerRole,DistributorRole,RetailerRole,Consumer
     string memory _productNotes
     ) public
     // Call modifier to verify caller of this function
-    //only owner can plant the coffee tree?
-    verifyCaller(owner)
+    //only farmer can plant item
+    onlyFarmer()
   {
     // add the new item as part of planted
     items[_upc].upc = _upc;
@@ -218,6 +218,7 @@ contract SupplyChain is Ownable,FarmerRole,DistributorRole,RetailerRole,Consumer
   isPlanted(_upc)
   // Call modifier to verify caller of this function
   verifyCaller(items[_upc].originFarmerID)
+  onlyFarmer()
   {
     // Update the appropriate fields
     items[_upc].itemState = State.Matured;
@@ -234,6 +235,7 @@ contract SupplyChain is Ownable,FarmerRole,DistributorRole,RetailerRole,Consumer
     isMatured(_upc)
     // Call modifier to verify caller of this function
     verifyCaller(items[_upc].originFarmerID)
+    onlyFarmer()
   {
     // Update the appropriate fields
     items[_upc].itemState = State.Harvested;
@@ -253,6 +255,7 @@ contract SupplyChain is Ownable,FarmerRole,DistributorRole,RetailerRole,Consumer
   // Call modifier to verify caller of this function
   //only the origin farmer can process the product
   verifyCaller(items[_upc].originFarmerID)
+  onlyFarmer()
   {
     // Update the appropriate fields
     items[_upc].itemState = State.Processed;
@@ -267,6 +270,7 @@ contract SupplyChain is Ownable,FarmerRole,DistributorRole,RetailerRole,Consumer
   processed(_upc)
   // Call modifier to verify caller of this function
   verifyCaller(items[_upc].originFarmerID)
+  onlyFarmer()
   {
     // Update the appropriate fields
     items[_upc].itemState = State.Packed;
@@ -280,6 +284,7 @@ contract SupplyChain is Ownable,FarmerRole,DistributorRole,RetailerRole,Consumer
   packed(_upc)
   // Call modifier to verify caller of this function
   verifyCaller(items[_upc].originFarmerID)
+  onlyFarmer()
   {
     // Update the appropriate fields
     items[_upc].itemState = State.ForSale;
@@ -298,6 +303,7 @@ contract SupplyChain is Ownable,FarmerRole,DistributorRole,RetailerRole,Consumer
     paidEnough(msg.value)
     // Call modifer to send any excess ether back to buyer
     //checkValue(msg.value,items[_upc].distributorID)
+    onlyConsumer()
     {
     // Update the appropriate fields - ownerID, distributorID, itemState
     items[_upc].ownerID = msg.sender;
@@ -316,6 +322,7 @@ contract SupplyChain is Ownable,FarmerRole,DistributorRole,RetailerRole,Consumer
     sold(_upc)
     // Call modifier to verify caller of this function
     verifyCaller(items[_upc].originFarmerID)
+    onlyFarmer()
     {
     // Update the appropriate fields
     items[_upc].itemState = State.Shipped;
@@ -329,6 +336,8 @@ contract SupplyChain is Ownable,FarmerRole,DistributorRole,RetailerRole,Consumer
     // Call modifier to check if upc has passed previous supply chain stage
     shipped(_upc)
     // Access Control List enforced by calling Smart Contract / DApp
+    //only regstered retailer can receive Item
+    onlyRetailer()
     {
     // Update the appropriate fields - ownerID, retailerID, itemState
     items[_upc].ownerID = msg.sender;
@@ -346,6 +355,7 @@ contract SupplyChain is Ownable,FarmerRole,DistributorRole,RetailerRole,Consumer
     received(_upc)
     // Access Control List enforced by calling Smart Contract / DApp
     //need to check consumer ID here
+    onlyConsumer()
     {
     // Update the appropriate fields - ownerID, consumerID, itemState
     items[_upc].ownerID = msg.sender;

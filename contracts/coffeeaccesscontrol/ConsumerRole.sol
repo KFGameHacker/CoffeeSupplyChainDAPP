@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
 // Import the library 'Roles'
-import "./Roles.sol";
+import "contracts/coffeeaccesscontrol/Roles.sol";
 
 // Define a contract 'ConsumerRole' to manage this role - add, remove, check
 contract ConsumerRole{
