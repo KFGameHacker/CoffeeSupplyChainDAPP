@@ -51,5 +51,5 @@ contract ConsumerRole is SupplyChain{
   function _removeConsumer(address account) internal {
     consumers.remove(account);
     emit ConsumerRemoved(account);
-  }
 }
+  }

@@ -47,7 +47,7 @@ contract DistributorRole is SupplyChain{
 
   // Define an internal function '_removeDistributor' to remove this role, called by 'removeDistributor'
   function _removeDistributor(address account) internal {
-    distributors.add(account);
+    distributors.remove(account);
     emit DistributorRemoved(account);
   }
 }
