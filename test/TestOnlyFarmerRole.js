@@ -9,7 +9,7 @@ contract('FarmerRole',(accounts)=>{
 
     before(async()=>{
         FarmerRoleManager = await FarmerRole.deployed();
-        console.log("\nSupplyChain Contract deployed at: "+FarmerRoleManager.address+"\n");
+        console.log("\nFarmerRole Contract deployed at: "+FarmerRoleManager.address+"\n");
     });
 
     it('should owner is a member of farmer',async()=>{

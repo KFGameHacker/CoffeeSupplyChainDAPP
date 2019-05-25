@@ -26,7 +26,8 @@ contract('SupplyChain', function(accounts) {
 
     //deploy contract before test
     before(async ()=>{
-        supplyChain = await SupplyChain.deployed()
+        //supplyChain = await SupplyChain.deployed()
+        supplyChain = await SupplyChain.at('0x6ccb74f73f4F518e7b60c017fD4b0956AeE7C138')
         console.log("\nSupplyChain Contract deployed at: "+supplyChain.address+"\n");
     });
 

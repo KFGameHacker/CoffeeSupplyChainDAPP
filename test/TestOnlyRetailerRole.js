@@ -9,7 +9,7 @@ contract('RetailerRole',(accounts)=>{
 
     before(async()=>{
         RetailerRoleManager = await RetailerRole.deployed({from:owner});
-        console.log("\nSupplyChain Contract deployed at: "+RetailerRoleManager.address+"\n");
+        console.log("\nRetailerRole Contract deployed at: "+RetailerRoleManager.address+"\n");
     });
 
     it('should owner is a member of Retailer',async()=>{

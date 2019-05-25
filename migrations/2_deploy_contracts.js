@@ -5,10 +5,15 @@ var RetailerRole = artifacts.require("./RetailerRole.sol");
 var ConsumerRole = artifacts.require("./ConsumerRole.sol");
 var SupplyChain = artifacts.require("./SupplyChain.sol");
 
-module.exports = function(deployer) {
-  deployer.deploy(FarmerRole);
-  deployer.deploy(DistributorRole);
-  deployer.deploy(RetailerRole);
-  deployer.deploy(ConsumerRole);
+const Farmer = accounts[0]
+const Distributor = accounts[1];
+const Retailer = accounts[2];
+const Consumer = accounts[3];
+
+module.exports = function(deployer,accounts) {
+  deployer.deploy(FarmerRole,{from:Farmer});
+  deployer.deploy(DistributorRole,{from:Distributor});
+  deployer.deploy(RetailerRole,{from:Retailer});
+  deployer.deploy(ConsumerRole,{from:Consumer});
   deployer.deploy(SupplyChain);
 };
