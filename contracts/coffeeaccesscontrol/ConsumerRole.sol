@@ -5,12 +5,13 @@ import "./Roles.sol";
 import "../coffeebase/SupplyChain.sol";
 
 // Define a contract 'ConsumerRole' to manage this role - add, remove, check
-contract ConsumerRole is SupplyChain {
+contract ConsumerRole is SupplyChain{
   using Roles for Roles.Role;
 
   // Define 2 events, one for Adding, and other for Removing
   event ConsumerAdded(address indexed account);
   event ConsumerRemoved(address indexed account);
+
   // Define a struct 'consumers' by inheriting from 'Roles' library, struct Role
   Roles.Role private consumers;
 
@@ -21,13 +22,13 @@ contract ConsumerRole is SupplyChain {
 
   // Define a modifier that checks to see if msg.sender has the appropriate role
   modifier onlyConsumer() {
-    require(isConsumer(msg.sender),'sorry, message sender is not the consumer');
+    require(isConsumer(msg.sender),'sorry, message sender is not a consumer');
     _;
   }
 
   // Define a function 'isConsumer' to check this role
   function isConsumer(address account) public view returns (bool) {
-    consumers.has(account);
+    return consumers.has(account);
   }
 
   // Define a function 'addConsumer' that adds this role
