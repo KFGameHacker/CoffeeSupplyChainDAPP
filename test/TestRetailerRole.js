@@ -8,7 +8,7 @@ contract('RetailerRole',(accounts)=>{
     const newRetailer2 = accounts[2];
 
     before(async()=>{
-        RetailerRoleManager = await RetailerRole.deployed();
+        RetailerRoleManager = await RetailerRole.deployed({from:owner});
         console.log("\nSupplyChain Contract deployed at: "+RetailerRoleManager.address+"\n");
     });
 

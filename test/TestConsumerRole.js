@@ -1,100 +1,115 @@
-let FarmerRole = artifacts.require('FarmerRole');
+let ConsumerRole = artifacts.require('ConsumerRole');
 
-contract('FarmerRole',(accounts)=>{
+contract('ConsumerRole',(accounts)=>{
 
-    let FarmerRoleManager;
-    const owner = accounts[0]
-    const newFarmer1 = accounts[1];
-    const newFarmer2 = accounts[2];
+    let ConsumerRoleManager;
+    const owner = accounts[0];
+    const newConsumer1 = accounts[1];
+    const newConsumer2 = accounts[2];
 
     before(async()=>{
-        FarmerRoleManager = await FarmerRole.deployed();
-        console.log("\nSupplyChain Contract deployed at: "+FarmerRoleManager.address+"\n");
-    });
+        
+        try{
+            ConsumerRoleManager = await ConsumerRole.deployed({from:owner});
+        }
+        catch(err){
+            console.log(err)
+        }
 
-    it('should owner is a member of farmer',async()=>{
-        let result = await FarmerRoleManager.isFarmer(owner);
-
-        assert.equal(result,true,'Error: contract owner is not the farmer');
-    });
-
-    it('should add two new farmers success',async()=>{
         let eventEmitted = false;
 
         //watch the event
-        FarmerRoleManager.FarmerAdded((err,res)=>{
+        ConsumerRoleManager.ConsumerAdded((err,res)=>{
             eventEmitted = true;
         });
 
-        //add a new farmer
-        await FarmerRoleManager.addFarmer(newFarmer1,{from:owner});
-        await FarmerRoleManager.addFarmer(newFarmer2,{from:owner});
-
-        //verify the new farmer ID
-        let result1 = await FarmerRoleManager.isFarmer(newFarmer1);
-        let result2 = await FarmerRoleManager.isFarmer(newFarmer2);
-
-        assert.equal(eventEmitted,true,'Error: FarmerAdded event not emitted.');
-        assert.equal(result1,true,'Error: '+newFarmer1+' is not the farmer.');
-        assert.equal(result2,true,'Error: '+newFarmer2+' is not the farmer');
+        assert.equal(eventEmitted,true,'Error: ConsumerAdded event not emitted.');
+        console.log("\nConsumer Role AccessControl Contract deployed at: "+ConsumerRoleManager.address+"\n");
     });
 
-    it('should renounce a farmer role success by a farmer',async ()=>{
+    it.only('should owner is a member of Consumer',async()=>{
+        let result = await ConsumerRoleManager.isConsumer(owner);
+
+        assert.equal(result,true,'Error: contract owner is not the Consumer');
+    });
+
+    it('should add two new Consumers success',async()=>{
         let eventEmitted = false;
 
         //watch the event
-        FarmerRoleManager.FarmerRemoved((err,res)=>{
+        ConsumerRoleManager.ConsumerAdded((err,res)=>{
             eventEmitted = true;
         });
 
-        //renounce the farmer role
-        await FarmerRoleManager.renounceFarmer({from:newFarmer2});
-        let result = await FarmerRoleManager.isFarmer(newFarmer2);
+        //add a new Consumer
+        await ConsumerRoleManager.addConsumer(newConsumer1,{from:owner});
+        await ConsumerRoleManager.addConsumer(newConsumer2,{from:owner});
 
-        assert.equal(result,false,'Error:'+newFarmer2+'should be removed from roles');
-        assert.equal(eventEmitted,true,'Error: FarmerRemoved event not emitted.');
+        //verify the new Consumer ID
+        let result1 = await ConsumerRoleManager.isConsumer(newConsumer1);
+        let result2 = await ConsumerRoleManager.isConsumer(newConsumer2);
+
+        assert.equal(eventEmitted,true,'Error: ConsumerAdded event not emitted.');
+        assert.equal(result1,true,'Error: '+newConsumer1+' is not the Consumer.');
+        assert.equal(result2,true,'Error: '+newConsumer2+' is not the Consumer');
+    });
+
+    it('should renounce a Consumer role success by a Consumer',async ()=>{
+        let eventEmitted = false;
+
+        //watch the event
+        ConsumerRoleManager.ConsumerRemoved((err,res)=>{
+            eventEmitted = true;
+        });
+
+        //renounce the Consumer role
+        await ConsumerRoleManager.renounceConsumer({from:newConsumer2});
+        let result = await ConsumerRoleManager.isConsumer(newConsumer2);
+
+        assert.equal(result,false,'Error:'+newConsumer2+'should be removed from roles');
+        assert.equal(eventEmitted,true,'Error: ConsumerRemoved event not emitted.');
     })
 
-    it('should failed when adding a existed farmer',async()=>{
+    it('should failed when adding a existed Consumer',async()=>{
         let eventEmitted = false;
 
         //watch the event
-        FarmerRoleManager.FarmerAdded((err,res)=>{
+        ConsumerRoleManager.ConsumerAdded((err,res)=>{
             eventEmitted = true;
         });
 
         try{
-        //add a new farmer
-        await FarmerRoleManager.addFarmer(owner,{from:owner});
+        //add a new Consumer
+        await ConsumerRoleManager.addConsumer(owner,{from:owner});
         }
         catch(err){
             assert.ok(err);
         }
-        //verify the new farmer ID
-        let result = await FarmerRoleManager.isFarmer(owner);
+        //verify the new Consumer ID
+        let result = await ConsumerRoleManager.isConsumer(owner);
 
-        assert.equal(eventEmitted,true,'Error: FarmerAdded event not emitted.');
-        assert.equal(result,true,'Error: '+newFarmer1+' is not the farmer.');
+        assert.equal(eventEmitted,true,'Error: ConsumerAdded event not emitted.');
+        assert.equal(result,true,'Error: '+newConsumer1+' is not the Consumer.');
     });
 
-    it('should failed when renouncing a farmer role who is not a farmer',async ()=>{
+    it('should failed when renouncing a Consumer role who is not a Consumer',async ()=>{
         let eventEmitted = false;
 
         //watch the event
-        FarmerRoleManager.FarmerRemoved((err,res)=>{
+        ConsumerRoleManager.ConsumerRemoved((err,res)=>{
             eventEmitted = true;
         });
 
         try{
-            //renounce the farmer role
-            await FarmerRoleManager.renounceFarmer({from:accounts[5]});
+            //renounce the Consumer role
+            await ConsumerRoleManager.renounceConsumer({from:accounts[5]});
         }catch(err){
             assert.ok(err);
         }
         
-        let result = await FarmerRoleManager.isFarmer(accounts[5]);
+        let result = await ConsumerRoleManager.isConsumer(accounts[5]);
 
         assert.equal(result,false,'Error:'+accounts[5]+'should be removed from roles');
-        assert.equal(eventEmitted,true,'Error: FarmerRemoved event not emitted.');
+        assert.equal(eventEmitted,true,'Error: ConsumerRemoved event not emitted.');
     })
 });
