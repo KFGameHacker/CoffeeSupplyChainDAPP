@@ -80,25 +80,25 @@
       "signature": "0x80fc0ce4"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addFarmer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceFarmer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isFarmer\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"FarmerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"FarmerRemoved\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"contracts/coffeeaccesscontrol/FarmerRole.sol\":\"FarmerRole\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/coffeeaccesscontrol/FarmerRole.sol\":{\"keccak256\":\"0x1f970884313a8ba0870d591de697c9f3ff8feb0f946b0106bba705c90be0cc2c\",\"urls\":[\"bzzr://8ca10d6ef95248c4f963057b8a2531ea8040cfbbadb5e2c9e66a60f9b15d4186\"]},\"contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0xdcf279ea5c0a1ddeaececea08d7c527c738793212a2c5c39835991c154667740\",\"urls\":[\"bzzr://d8f5bd6050dadcccee71577d5297c9367387e40c003bfa871d530cbdf9cae599\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506100293361002e640100000000026401000000009004565b6101e8565b61004f8160006100956401000000000261034c179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156100d157600080fd5b6100ea8282610154640100000000026401000000009004565b1515156100f657600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415151561019157600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b6104d7806101f76000396000f3fe608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806380c3f96d1461005c57806380fc0ce4146100ad578063b9429069146100c4575b600080fd5b34801561006857600080fd5b506100ab6004803603602081101561007f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061012d565b005b3480156100b957600080fd5b506100c26101dc565b005b3480156100d057600080fd5b50610113600480360360208110156100e757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101e7565b604051808215151515815260200191505060405180910390f35b610136336101e7565b15156101d0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001807f736f7272792c206d6573736167652073656e646572206973206e6f742061206681526020017f61726d657200000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b6101d981610204565b50565b6101e53361025e565b565b60006101fd8260006102b890919063ffffffff16565b9050919050565b61021881600061034c90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b6102728160006103fc90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141515156102f557600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561038857600080fd5b61039282826102b8565b15151561039e57600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561043857600080fd5b61044282826102b8565b151561044d57600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea165627a7a723058206ba2dc64c7e4c96e48d7d56b49cab938b0a8b48874f494c96e72f77a6d48cc6c0029",
-  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806380c3f96d1461005c57806380fc0ce4146100ad578063b9429069146100c4575b600080fd5b34801561006857600080fd5b506100ab6004803603602081101561007f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061012d565b005b3480156100b957600080fd5b506100c26101dc565b005b3480156100d057600080fd5b50610113600480360360208110156100e757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101e7565b604051808215151515815260200191505060405180910390f35b610136336101e7565b15156101d0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001807f736f7272792c206d6573736167652073656e646572206973206e6f742061206681526020017f61726d657200000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b6101d981610204565b50565b6101e53361025e565b565b60006101fd8260006102b890919063ffffffff16565b9050919050565b61021881600061034c90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b6102728160006103fc90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141515156102f557600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561038857600080fd5b61039282826102b8565b15151561039e57600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561043857600080fd5b61044282826102b8565b151561044d57600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea165627a7a723058206ba2dc64c7e4c96e48d7d56b49cab938b0a8b48874f494c96e72f77a6d48cc6c0029",
-  "sourceMap": "181:1501:10:-;;;584:54;8:9:-1;5:2;;;30:1;27;20:12;5:2;584:54:10;611:22;622:10;611;;;:22;;;:::i;:::-;181:1501;;1357:108;1409:20;1421:7;1409;:11;;;;;;:20;;;;;:::i;:::-;1452:7;1440:20;;;;;;;;;;;;1357:108;:::o;243:167:12:-;334:1;315:21;;:7;:21;;;;307:30;;;;;;;;352:18;356:4;362:7;352:3;;;:18;;;:::i;:::-;351:19;343:28;;;;;;;;401:4;378;:11;;:20;390:7;378:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;243:167;;:::o;724:166::-;808:4;849:1;830:21;;:7;:21;;;;822:30;;;;;;;;865:4;:11;;:20;877:7;865:20;;;;;;;;;;;;;;;;;;;;;;;;;858:27;;724:166;;;;:::o;181:1501:10:-;;;;;;;",
-  "deployedSourceMap": "181:1501:10:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1048:84;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1048:84:10;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1048:84:10;;;;;;;;;;;;;;;;;;;;;;1198:69;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1198:69:10;;;;;;889:100;;8:9:-1;5:2;;;30:1;27;20:12;5:2;889:100:10;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;889:100:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1048:84;759:20;768:10;759:8;:20::i;:::-;751:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1108:19;1119:7;1108:10;:19::i;:::-;1048:84;:::o;1198:69::-;1237:25;1251:10;1237:13;:25::i;:::-;1198:69::o;889:100::-;945:4;964:20;976:7;964;:11;;:20;;;;:::i;:::-;957:27;;889:100;;;:::o;1357:108::-;1409:20;1421:7;1409;:11;;:20;;;;:::i;:::-;1452:7;1440:20;;;;;;;;;;;;1357:108;:::o;1564:116::-;1619:23;1634:7;1619;:14;;:23;;;;:::i;:::-;1667:7;1653:22;;;;;;;;;;;;1564:116;:::o;724:166:12:-;808:4;849:1;830:21;;:7;:21;;;;822:30;;;;;;;;865:4;:11;;:20;877:7;865:20;;;;;;;;;;;;;;;;;;;;;;;;;858:27;;724:166;;;;:::o;243:167::-;334:1;315:21;;:7;:21;;;;307:30;;;;;;;;352:18;356:4;362:7;352:3;:18::i;:::-;351:19;343:28;;;;;;;;401:4;378;:11;;:20;390:7;378:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;243:167;;:::o;476:170::-;570:1;551:21;;:7;:21;;;;543:30;;;;;;;;587:18;591:4;597:7;587:3;:18::i;:::-;579:27;;;;;;;;636:5;613:4;:11;;:20;625:7;613:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;476:170;;:::o",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addFarmer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceFarmer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isFarmer\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"FarmerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"FarmerRemoved\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/kevin/Dropbox/works/dev/udacity-blockchain-developer-nanodegree-Term2/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol\":\"FarmerRole\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/kevin/Dropbox/works/dev/udacity-blockchain-developer-nanodegree-Term2/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol\":{\"keccak256\":\"0x1f970884313a8ba0870d591de697c9f3ff8feb0f946b0106bba705c90be0cc2c\",\"urls\":[\"bzzr://8ca10d6ef95248c4f963057b8a2531ea8040cfbbadb5e2c9e66a60f9b15d4186\"]},\"contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0xdcf279ea5c0a1ddeaececea08d7c527c738793212a2c5c39835991c154667740\",\"urls\":[\"bzzr://d8f5bd6050dadcccee71577d5297c9367387e40c003bfa871d530cbdf9cae599\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506100293361002e640100000000026401000000009004565b6101e8565b61004f8160006100956401000000000261034c179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156100d157600080fd5b6100ea8282610154640100000000026401000000009004565b1515156100f657600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415151561019157600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b6104d7806101f76000396000f3fe608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806380c3f96d1461005c57806380fc0ce4146100ad578063b9429069146100c4575b600080fd5b34801561006857600080fd5b506100ab6004803603602081101561007f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061012d565b005b3480156100b957600080fd5b506100c26101dc565b005b3480156100d057600080fd5b50610113600480360360208110156100e757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101e7565b604051808215151515815260200191505060405180910390f35b610136336101e7565b15156101d0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001807f736f7272792c206d6573736167652073656e646572206973206e6f742061206681526020017f61726d657200000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b6101d981610204565b50565b6101e53361025e565b565b60006101fd8260006102b890919063ffffffff16565b9050919050565b61021881600061034c90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b6102728160006103fc90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141515156102f557600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561038857600080fd5b61039282826102b8565b15151561039e57600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561043857600080fd5b61044282826102b8565b151561044d57600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea165627a7a723058203acdafbb1ecfe6f9ac17520ef19307ef08462b3d8f0e836dbf07955191721f2b0029",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806380c3f96d1461005c57806380fc0ce4146100ad578063b9429069146100c4575b600080fd5b34801561006857600080fd5b506100ab6004803603602081101561007f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061012d565b005b3480156100b957600080fd5b506100c26101dc565b005b3480156100d057600080fd5b50610113600480360360208110156100e757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101e7565b604051808215151515815260200191505060405180910390f35b610136336101e7565b15156101d0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001807f736f7272792c206d6573736167652073656e646572206973206e6f742061206681526020017f61726d657200000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b6101d981610204565b50565b6101e53361025e565b565b60006101fd8260006102b890919063ffffffff16565b9050919050565b61021881600061034c90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b6102728160006103fc90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141515156102f557600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561038857600080fd5b61039282826102b8565b15151561039e57600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561043857600080fd5b61044282826102b8565b151561044d57600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea165627a7a723058203acdafbb1ecfe6f9ac17520ef19307ef08462b3d8f0e836dbf07955191721f2b0029",
+  "sourceMap": "181:1501:3:-;;;584:54;8:9:-1;5:2;;;30:1;27;20:12;5:2;584:54:3;611:22;622:10;611;;;:22;;;:::i;:::-;181:1501;;1357:108;1409:20;1421:7;1409;:11;;;;;;:20;;;;;:::i;:::-;1452:7;1440:20;;;;;;;;;;;;1357:108;:::o;243:167:12:-;334:1;315:21;;:7;:21;;;;307:30;;;;;;;;352:18;356:4;362:7;352:3;;;:18;;;:::i;:::-;351:19;343:28;;;;;;;;401:4;378;:11;;:20;390:7;378:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;243:167;;:::o;724:166::-;808:4;849:1;830:21;;:7;:21;;;;822:30;;;;;;;;865:4;:11;;:20;877:7;865:20;;;;;;;;;;;;;;;;;;;;;;;;;858:27;;724:166;;;;:::o;181:1501:3:-;;;;;;;",
+  "deployedSourceMap": "181:1501:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1048:84;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1048:84:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1048:84:3;;;;;;;;;;;;;;;;;;;;;;1198:69;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1198:69:3;;;;;;889:100;;8:9:-1;5:2;;;30:1;27;20:12;5:2;889:100:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;889:100:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1048:84;759:20;768:10;759:8;:20::i;:::-;751:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1108:19;1119:7;1108:10;:19::i;:::-;1048:84;:::o;1198:69::-;1237:25;1251:10;1237:13;:25::i;:::-;1198:69::o;889:100::-;945:4;964:20;976:7;964;:11;;:20;;;;:::i;:::-;957:27;;889:100;;;:::o;1357:108::-;1409:20;1421:7;1409;:11;;:20;;;;:::i;:::-;1452:7;1440:20;;;;;;;;;;;;1357:108;:::o;1564:116::-;1619:23;1634:7;1619;:14;;:23;;;;:::i;:::-;1667:7;1653:22;;;;;;;;;;;;1564:116;:::o;724:166:12:-;808:4;849:1;830:21;;:7;:21;;;;822:30;;;;;;;;865:4;:11;;:20;877:7;865:20;;;;;;;;;;;;;;;;;;;;;;;;;858:27;;724:166;;;;:::o;243:167::-;334:1;315:21;;:7;:21;;;;307:30;;;;;;;;352:18;356:4;362:7;352:3;:18::i;:::-;351:19;343:28;;;;;;;;401:4;378;:11;;:20;390:7;378:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;243:167;;:::o;476:170::-;570:1;551:21;;:7;:21;;;;543:30;;;;;;;;587:18;591:4;597:7;587:3;:18::i;:::-;579:27;;;;;;;;636:5;613:4;:11;;:20;625:7;613:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;476:170;;:::o",
   "source": "pragma solidity ^0.5.0;\n\n// Import the library 'Roles'\nimport \"contracts/coffeeaccesscontrol/Roles.sol\";\n\n// Define a contract 'FarmerRole' to manage this role - add, remove, check\ncontract FarmerRole{\n  using Roles for Roles.Role;\n\n  // Define 2 events, one for Adding, and other for Removing\n  event FarmerAdded(address indexed account);\n  event FarmerRemoved(address indexed account);\n\n  // Define a struct 'farmers' by inheriting from 'Roles' library, struct Role\n  Roles.Role private farmers;\n\n  // In the constructor make the address that deploys this contract the 1st farmer\n  constructor() public {\n    _addFarmer(msg.sender);\n  }\n\n  // Define a modifier that checks to see if msg.sender has the appropriate role\n  modifier onlyFarmer() {\n    require(isFarmer(msg.sender),'sorry, message sender is not a farmer');\n    _;\n  }\n\n  // Define a function 'isFarmer' to check this role\n  function isFarmer(address account) public view returns (bool) {\n    return farmers.has(account);\n  }\n\n  // Define a function 'addFarmer' that adds this role\n  function addFarmer(address account) public onlyFarmer {\n    _addFarmer(account);\n  }\n\n  // Define a function 'renounceFarmer' to renounce this role\n  function renounceFarmer() public {\n    _removeFarmer(msg.sender);\n  }\n\n  // Define an internal function '_addFarmer' to add this role, called by 'addFarmer'\n  function _addFarmer(address account) internal {\n    farmers.add(account);\n    emit FarmerAdded(account);\n  }\n\n  // Define an internal function '_removeFarmer' to remove this role, called by 'removeFarmer'\n  function _removeFarmer(address account) internal {\n    farmers.remove(account);\n    emit FarmerRemoved(account);\n  }\n}",
-  "sourcePath": "contracts/coffeeaccesscontrol/FarmerRole.sol",
+  "sourcePath": "/Users/kevin/Dropbox/works/dev/udacity-blockchain-developer-nanodegree-Term2/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol",
   "ast": {
-    "absolutePath": "contracts/coffeeaccesscontrol/FarmerRole.sol",
+    "absolutePath": "/Users/kevin/Dropbox/works/dev/udacity-blockchain-developer-nanodegree-Term2/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol",
     "exportedSymbols": {
       "FarmerRole": [
-        1978
+        368
       ]
     },
-    "id": 1979,
+    "id": 369,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1876,
+        "id": 266,
         "literals": [
           "solidity",
           "^",
@@ -106,16 +106,16 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:10"
+        "src": "0:23:3"
       },
       {
         "absolutePath": "contracts/coffeeaccesscontrol/Roles.sol",
         "file": "contracts/coffeeaccesscontrol/Roles.sol",
-        "id": 1877,
+        "id": 267,
         "nodeType": "ImportDirective",
-        "scope": 1979,
-        "sourceUnit": 2177,
-        "src": "55:49:10",
+        "scope": 369,
+        "sourceUnit": 2195,
+        "src": "55:49:3",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -125,38 +125,38 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1978,
+        "id": 368,
         "linearizedBaseContracts": [
-          1978
+          368
         ],
         "name": "FarmerRole",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 1880,
+            "id": 270,
             "libraryName": {
               "contractScope": null,
-              "id": 1878,
+              "id": 268,
               "name": "Roles",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2176,
-              "src": "210:5:10",
+              "referencedDeclaration": 2194,
+              "src": "210:5:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Roles_$2176",
+                "typeIdentifier": "t_contract$_Roles_$2194",
                 "typeString": "library Roles"
               }
             },
             "nodeType": "UsingForDirective",
-            "src": "204:27:10",
+            "src": "204:27:3",
             "typeName": {
               "contractScope": null,
-              "id": 1879,
+              "id": 269,
               "name": "Roles.Role",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2089,
-              "src": "220:10:10",
+              "referencedDeclaration": 2107,
+              "src": "220:10:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Role_$2089_storage_ptr",
+                "typeIdentifier": "t_struct$_Role_$2107_storage_ptr",
                 "typeString": "struct Roles.Role"
               }
             }
@@ -164,21 +164,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1884,
+            "id": 274,
             "name": "FarmerAdded",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1883,
+              "id": 273,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1882,
+                  "id": 272,
                   "indexed": true,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1884,
-                  "src": "314:23:10",
+                  "scope": 274,
+                  "src": "314:23:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -186,10 +186,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1881,
+                    "id": 271,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "314:7:10",
+                    "src": "314:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -200,28 +200,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "313:25:10"
+              "src": "313:25:3"
             },
-            "src": "296:43:10"
+            "src": "296:43:3"
           },
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1888,
+            "id": 278,
             "name": "FarmerRemoved",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1887,
+              "id": 277,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1886,
+                  "id": 276,
                   "indexed": true,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1888,
-                  "src": "362:23:10",
+                  "scope": 278,
+                  "src": "362:23:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -229,10 +229,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1885,
+                    "id": 275,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "362:7:10",
+                    "src": "362:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -243,32 +243,32 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "361:25:10"
+              "src": "361:25:3"
             },
-            "src": "342:45:10"
+            "src": "342:45:3"
           },
           {
             "constant": false,
-            "id": 1890,
+            "id": 280,
             "name": "farmers",
             "nodeType": "VariableDeclaration",
-            "scope": 1978,
-            "src": "470:26:10",
+            "scope": 368,
+            "src": "470:26:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Role_$2089_storage",
+              "typeIdentifier": "t_struct$_Role_$2107_storage",
               "typeString": "struct Roles.Role"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1889,
+              "id": 279,
               "name": "Roles.Role",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2089,
-              "src": "470:10:10",
+              "referencedDeclaration": 2107,
+              "src": "470:10:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Role_$2089_storage_ptr",
+                "typeIdentifier": "t_struct$_Role_$2107_storage_ptr",
                 "typeString": "struct Roles.Role"
               }
             },
@@ -277,9 +277,9 @@
           },
           {
             "body": {
-              "id": 1898,
+              "id": 288,
               "nodeType": "Block",
-              "src": "605:33:10",
+              "src": "605:33:3",
               "statements": [
                 {
                   "expression": {
@@ -289,18 +289,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1894,
+                          "id": 284,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2300,
-                          "src": "622:3:10",
+                          "referencedDeclaration": 2318,
+                          "src": "622:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1895,
+                        "id": 285,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -308,7 +308,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "622:10:10",
+                        "src": "622:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -322,18 +322,18 @@
                           "typeString": "address payable"
                         }
                       ],
-                      "id": 1893,
+                      "id": 283,
                       "name": "_addFarmer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1961,
-                      "src": "611:10:10",
+                      "referencedDeclaration": 351,
+                      "src": "611:10:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 1896,
+                    "id": 286,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -341,48 +341,48 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "611:22:10",
+                    "src": "611:22:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1897,
+                  "id": 287,
                   "nodeType": "ExpressionStatement",
-                  "src": "611:22:10"
+                  "src": "611:22:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1899,
+            "id": 289,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1891,
+              "id": 281,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "595:2:10"
+              "src": "595:2:3"
             },
             "returnParameters": {
-              "id": 1892,
+              "id": 282,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "605:0:10"
+              "src": "605:0:3"
             },
-            "scope": 1978,
-            "src": "584:54:10",
+            "scope": 368,
+            "src": "584:54:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1910,
+              "id": 300,
               "nodeType": "Block",
-              "src": "745:87:10",
+              "src": "745:87:3",
               "statements": [
                 {
                   "expression": {
@@ -395,18 +395,18 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1903,
+                              "id": 293,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2300,
-                              "src": "768:3:10",
+                              "referencedDeclaration": 2318,
+                              "src": "768:3:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 1904,
+                            "id": 294,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -414,7 +414,7 @@
                             "memberName": "sender",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": null,
-                            "src": "768:10:10",
+                            "src": "768:10:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address_payable",
                               "typeString": "address payable"
@@ -428,18 +428,18 @@
                               "typeString": "address payable"
                             }
                           ],
-                          "id": 1902,
+                          "id": 292,
                           "name": "isFarmer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1924,
-                          "src": "759:8:10",
+                          "referencedDeclaration": 314,
+                          "src": "759:8:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
                             "typeString": "function (address) view returns (bool)"
                           }
                         },
-                        "id": 1905,
+                        "id": 295,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -447,7 +447,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "759:20:10",
+                        "src": "759:20:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -456,14 +456,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "736f7272792c206d6573736167652073656e646572206973206e6f742061206661726d6572",
-                        "id": 1906,
+                        "id": 296,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "780:39:10",
+                        "src": "780:39:3",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_e535ade53d9780d89542db3d07a1ba1b0bd1515194b35cbc238cd10e44d616a7",
@@ -483,21 +483,21 @@
                           "typeString": "literal_string \"sorry, message sender is not a farmer\""
                         }
                       ],
-                      "id": 1901,
+                      "id": 291,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2303,
-                        2304
+                        2321,
+                        2322
                       ],
-                      "referencedDeclaration": 2304,
-                      "src": "751:7:10",
+                      "referencedDeclaration": 2322,
+                      "src": "751:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 1907,
+                    "id": 297,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -505,41 +505,41 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "751:69:10",
+                    "src": "751:69:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1908,
+                  "id": 298,
                   "nodeType": "ExpressionStatement",
-                  "src": "751:69:10"
+                  "src": "751:69:3"
                 },
                 {
-                  "id": 1909,
+                  "id": 299,
                   "nodeType": "PlaceholderStatement",
-                  "src": "826:1:10"
+                  "src": "826:1:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1911,
+            "id": 301,
             "name": "onlyFarmer",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 1900,
+              "id": 290,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "742:2:10"
+              "src": "742:2:3"
             },
-            "src": "723:109:10",
+            "src": "723:109:3",
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 1923,
+              "id": 313,
               "nodeType": "Block",
-              "src": "951:38:10",
+              "src": "951:38:3",
               "statements": [
                 {
                   "expression": {
@@ -547,12 +547,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1920,
+                        "id": 310,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1913,
-                        "src": "976:7:10",
+                        "referencedDeclaration": 303,
+                        "src": "976:7:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -568,32 +568,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1918,
+                        "id": 308,
                         "name": "farmers",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1890,
-                        "src": "964:7:10",
+                        "referencedDeclaration": 280,
+                        "src": "964:7:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Role_$2089_storage",
+                          "typeIdentifier": "t_struct$_Role_$2107_storage",
                           "typeString": "struct Roles.Role storage ref"
                         }
                       },
-                      "id": 1919,
+                      "id": 309,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "has",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2175,
-                      "src": "964:11:10",
+                      "referencedDeclaration": 2193,
+                      "src": "964:11:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_Role_$2089_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_Role_$2089_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Role_$2107_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_Role_$2107_storage_ptr_$",
                         "typeString": "function (struct Roles.Role storage pointer,address) view returns (bool)"
                       }
                     },
-                    "id": 1921,
+                    "id": 311,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -601,37 +601,37 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "964:20:10",
+                    "src": "964:20:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 1917,
-                  "id": 1922,
+                  "functionReturnParameters": 307,
+                  "id": 312,
                   "nodeType": "Return",
-                  "src": "957:27:10"
+                  "src": "957:27:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1924,
+            "id": 314,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1914,
+              "id": 304,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1913,
+                  "id": 303,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1924,
-                  "src": "907:15:10",
+                  "scope": 314,
+                  "src": "907:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -639,10 +639,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1912,
+                    "id": 302,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "907:7:10",
+                    "src": "907:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -653,19 +653,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "906:17:10"
+              "src": "906:17:3"
             },
             "returnParameters": {
-              "id": 1917,
+              "id": 307,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1916,
+                  "id": 306,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1924,
-                  "src": "945:4:10",
+                  "scope": 314,
+                  "src": "945:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -673,10 +673,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1915,
+                    "id": 305,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "945:4:10",
+                    "src": "945:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -686,19 +686,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "944:6:10"
+              "src": "944:6:3"
             },
-            "scope": 1978,
-            "src": "889:100:10",
+            "scope": 368,
+            "src": "889:100:3",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1935,
+              "id": 325,
               "nodeType": "Block",
-              "src": "1102:30:10",
+              "src": "1102:30:3",
               "statements": [
                 {
                   "expression": {
@@ -706,12 +706,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1932,
+                        "id": 322,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1926,
-                        "src": "1119:7:10",
+                        "referencedDeclaration": 316,
+                        "src": "1119:7:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -725,18 +725,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1931,
+                      "id": 321,
                       "name": "_addFarmer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1961,
-                      "src": "1108:10:10",
+                      "referencedDeclaration": 351,
+                      "src": "1108:10:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 1933,
+                    "id": 323,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -744,56 +744,56 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1108:19:10",
+                    "src": "1108:19:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1934,
+                  "id": 324,
                   "nodeType": "ExpressionStatement",
-                  "src": "1108:19:10"
+                  "src": "1108:19:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1936,
+            "id": 326,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 1929,
+                "id": 319,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1928,
+                  "id": 318,
                   "name": "onlyFarmer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1911,
-                  "src": "1091:10:10",
+                  "referencedDeclaration": 301,
+                  "src": "1091:10:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1091:10:10"
+                "src": "1091:10:3"
               }
             ],
             "name": "addFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1927,
+              "id": 317,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1926,
+                  "id": 316,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1936,
-                  "src": "1067:15:10",
+                  "scope": 326,
+                  "src": "1067:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -801,10 +801,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1925,
+                    "id": 315,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1067:7:10",
+                    "src": "1067:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -815,25 +815,25 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1066:17:10"
+              "src": "1066:17:3"
             },
             "returnParameters": {
-              "id": 1930,
+              "id": 320,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1102:0:10"
+              "src": "1102:0:3"
             },
-            "scope": 1978,
-            "src": "1048:84:10",
+            "scope": 368,
+            "src": "1048:84:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1944,
+              "id": 334,
               "nodeType": "Block",
-              "src": "1231:36:10",
+              "src": "1231:36:3",
               "statements": [
                 {
                   "expression": {
@@ -843,18 +843,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1940,
+                          "id": 330,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2300,
-                          "src": "1251:3:10",
+                          "referencedDeclaration": 2318,
+                          "src": "1251:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1941,
+                        "id": 331,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -862,7 +862,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "1251:10:10",
+                        "src": "1251:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -876,18 +876,18 @@
                           "typeString": "address payable"
                         }
                       ],
-                      "id": 1939,
+                      "id": 329,
                       "name": "_removeFarmer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1977,
-                      "src": "1237:13:10",
+                      "referencedDeclaration": 367,
+                      "src": "1237:13:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 1942,
+                    "id": 332,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -895,48 +895,48 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1237:25:10",
+                    "src": "1237:25:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1943,
+                  "id": 333,
                   "nodeType": "ExpressionStatement",
-                  "src": "1237:25:10"
+                  "src": "1237:25:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1945,
+            "id": 335,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "renounceFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1937,
+              "id": 327,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1221:2:10"
+              "src": "1221:2:3"
             },
             "returnParameters": {
-              "id": 1938,
+              "id": 328,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1231:0:10"
+              "src": "1231:0:3"
             },
-            "scope": 1978,
-            "src": "1198:69:10",
+            "scope": 368,
+            "src": "1198:69:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1960,
+              "id": 350,
               "nodeType": "Block",
-              "src": "1403:62:10",
+              "src": "1403:62:3",
               "statements": [
                 {
                   "expression": {
@@ -944,12 +944,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1953,
+                        "id": 343,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1947,
-                        "src": "1421:7:10",
+                        "referencedDeclaration": 337,
+                        "src": "1421:7:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -965,32 +965,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1950,
+                        "id": 340,
                         "name": "farmers",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1890,
-                        "src": "1409:7:10",
+                        "referencedDeclaration": 280,
+                        "src": "1409:7:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Role_$2089_storage",
+                          "typeIdentifier": "t_struct$_Role_$2107_storage",
                           "typeString": "struct Roles.Role storage ref"
                         }
                       },
-                      "id": 1952,
+                      "id": 342,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2121,
-                      "src": "1409:11:10",
+                      "referencedDeclaration": 2139,
+                      "src": "1409:11:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2089_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2089_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2107_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2107_storage_ptr_$",
                         "typeString": "function (struct Roles.Role storage pointer,address)"
                       }
                     },
-                    "id": 1954,
+                    "id": 344,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -998,15 +998,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1409:20:10",
+                    "src": "1409:20:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1955,
+                  "id": 345,
                   "nodeType": "ExpressionStatement",
-                  "src": "1409:20:10"
+                  "src": "1409:20:3"
                 },
                 {
                   "eventCall": {
@@ -1014,12 +1014,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1957,
+                        "id": 347,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1947,
-                        "src": "1452:7:10",
+                        "referencedDeclaration": 337,
+                        "src": "1452:7:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1033,18 +1033,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1956,
+                      "id": 346,
                       "name": "FarmerAdded",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1884,
-                      "src": "1440:11:10",
+                      "referencedDeclaration": 274,
+                      "src": "1440:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 1958,
+                    "id": 348,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1052,36 +1052,36 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1440:20:10",
+                    "src": "1440:20:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1959,
+                  "id": 349,
                   "nodeType": "EmitStatement",
-                  "src": "1435:25:10"
+                  "src": "1435:25:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1961,
+            "id": 351,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_addFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1948,
+              "id": 338,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1947,
+                  "id": 337,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1961,
-                  "src": "1377:15:10",
+                  "scope": 351,
+                  "src": "1377:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1089,10 +1089,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1946,
+                    "id": 336,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1377:7:10",
+                    "src": "1377:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1103,25 +1103,25 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1376:17:10"
+              "src": "1376:17:3"
             },
             "returnParameters": {
-              "id": 1949,
+              "id": 339,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1403:0:10"
+              "src": "1403:0:3"
             },
-            "scope": 1978,
-            "src": "1357:108:10",
+            "scope": 368,
+            "src": "1357:108:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 1976,
+              "id": 366,
               "nodeType": "Block",
-              "src": "1613:67:10",
+              "src": "1613:67:3",
               "statements": [
                 {
                   "expression": {
@@ -1129,12 +1129,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1969,
+                        "id": 359,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1963,
-                        "src": "1634:7:10",
+                        "referencedDeclaration": 353,
+                        "src": "1634:7:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1150,32 +1150,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1966,
+                        "id": 356,
                         "name": "farmers",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1890,
-                        "src": "1619:7:10",
+                        "referencedDeclaration": 280,
+                        "src": "1619:7:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Role_$2089_storage",
+                          "typeIdentifier": "t_struct$_Role_$2107_storage",
                           "typeString": "struct Roles.Role storage ref"
                         }
                       },
-                      "id": 1968,
+                      "id": 358,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "remove",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2152,
-                      "src": "1619:14:10",
+                      "referencedDeclaration": 2170,
+                      "src": "1619:14:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2089_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2089_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2107_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2107_storage_ptr_$",
                         "typeString": "function (struct Roles.Role storage pointer,address)"
                       }
                     },
-                    "id": 1970,
+                    "id": 360,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1183,15 +1183,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1619:23:10",
+                    "src": "1619:23:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1971,
+                  "id": 361,
                   "nodeType": "ExpressionStatement",
-                  "src": "1619:23:10"
+                  "src": "1619:23:3"
                 },
                 {
                   "eventCall": {
@@ -1199,12 +1199,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1973,
+                        "id": 363,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1963,
-                        "src": "1667:7:10",
+                        "referencedDeclaration": 353,
+                        "src": "1667:7:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1218,18 +1218,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1972,
+                      "id": 362,
                       "name": "FarmerRemoved",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1888,
-                      "src": "1653:13:10",
+                      "referencedDeclaration": 278,
+                      "src": "1653:13:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 1974,
+                    "id": 364,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1237,36 +1237,36 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1653:22:10",
+                    "src": "1653:22:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1975,
+                  "id": 365,
                   "nodeType": "EmitStatement",
-                  "src": "1648:27:10"
+                  "src": "1648:27:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1977,
+            "id": 367,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_removeFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1964,
+              "id": 354,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1963,
+                  "id": 353,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1977,
-                  "src": "1587:15:10",
+                  "scope": 367,
+                  "src": "1587:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1274,10 +1274,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1962,
+                    "id": 352,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1587:7:10",
+                    "src": "1587:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1288,39 +1288,39 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1586:17:10"
+              "src": "1586:17:3"
             },
             "returnParameters": {
-              "id": 1965,
+              "id": 355,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1613:0:10"
+              "src": "1613:0:3"
             },
-            "scope": 1978,
-            "src": "1564:116:10",
+            "scope": 368,
+            "src": "1564:116:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1979,
-        "src": "181:1501:10"
+        "scope": 369,
+        "src": "181:1501:3"
       }
     ],
-    "src": "0:1682:10"
+    "src": "0:1682:3"
   },
   "legacyAST": {
-    "absolutePath": "contracts/coffeeaccesscontrol/FarmerRole.sol",
+    "absolutePath": "/Users/kevin/Dropbox/works/dev/udacity-blockchain-developer-nanodegree-Term2/project-6/contracts/coffeeaccesscontrol/FarmerRole.sol",
     "exportedSymbols": {
       "FarmerRole": [
-        1978
+        368
       ]
     },
-    "id": 1979,
+    "id": 369,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1876,
+        "id": 266,
         "literals": [
           "solidity",
           "^",
@@ -1328,16 +1328,16 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:10"
+        "src": "0:23:3"
       },
       {
         "absolutePath": "contracts/coffeeaccesscontrol/Roles.sol",
         "file": "contracts/coffeeaccesscontrol/Roles.sol",
-        "id": 1877,
+        "id": 267,
         "nodeType": "ImportDirective",
-        "scope": 1979,
-        "sourceUnit": 2177,
-        "src": "55:49:10",
+        "scope": 369,
+        "sourceUnit": 2195,
+        "src": "55:49:3",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -1347,38 +1347,38 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1978,
+        "id": 368,
         "linearizedBaseContracts": [
-          1978
+          368
         ],
         "name": "FarmerRole",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 1880,
+            "id": 270,
             "libraryName": {
               "contractScope": null,
-              "id": 1878,
+              "id": 268,
               "name": "Roles",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2176,
-              "src": "210:5:10",
+              "referencedDeclaration": 2194,
+              "src": "210:5:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Roles_$2176",
+                "typeIdentifier": "t_contract$_Roles_$2194",
                 "typeString": "library Roles"
               }
             },
             "nodeType": "UsingForDirective",
-            "src": "204:27:10",
+            "src": "204:27:3",
             "typeName": {
               "contractScope": null,
-              "id": 1879,
+              "id": 269,
               "name": "Roles.Role",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2089,
-              "src": "220:10:10",
+              "referencedDeclaration": 2107,
+              "src": "220:10:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Role_$2089_storage_ptr",
+                "typeIdentifier": "t_struct$_Role_$2107_storage_ptr",
                 "typeString": "struct Roles.Role"
               }
             }
@@ -1386,21 +1386,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1884,
+            "id": 274,
             "name": "FarmerAdded",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1883,
+              "id": 273,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1882,
+                  "id": 272,
                   "indexed": true,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1884,
-                  "src": "314:23:10",
+                  "scope": 274,
+                  "src": "314:23:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1408,10 +1408,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1881,
+                    "id": 271,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "314:7:10",
+                    "src": "314:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1422,28 +1422,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "313:25:10"
+              "src": "313:25:3"
             },
-            "src": "296:43:10"
+            "src": "296:43:3"
           },
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1888,
+            "id": 278,
             "name": "FarmerRemoved",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1887,
+              "id": 277,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1886,
+                  "id": 276,
                   "indexed": true,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1888,
-                  "src": "362:23:10",
+                  "scope": 278,
+                  "src": "362:23:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1451,10 +1451,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1885,
+                    "id": 275,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "362:7:10",
+                    "src": "362:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1465,32 +1465,32 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "361:25:10"
+              "src": "361:25:3"
             },
-            "src": "342:45:10"
+            "src": "342:45:3"
           },
           {
             "constant": false,
-            "id": 1890,
+            "id": 280,
             "name": "farmers",
             "nodeType": "VariableDeclaration",
-            "scope": 1978,
-            "src": "470:26:10",
+            "scope": 368,
+            "src": "470:26:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Role_$2089_storage",
+              "typeIdentifier": "t_struct$_Role_$2107_storage",
               "typeString": "struct Roles.Role"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1889,
+              "id": 279,
               "name": "Roles.Role",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2089,
-              "src": "470:10:10",
+              "referencedDeclaration": 2107,
+              "src": "470:10:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Role_$2089_storage_ptr",
+                "typeIdentifier": "t_struct$_Role_$2107_storage_ptr",
                 "typeString": "struct Roles.Role"
               }
             },
@@ -1499,9 +1499,9 @@
           },
           {
             "body": {
-              "id": 1898,
+              "id": 288,
               "nodeType": "Block",
-              "src": "605:33:10",
+              "src": "605:33:3",
               "statements": [
                 {
                   "expression": {
@@ -1511,18 +1511,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1894,
+                          "id": 284,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2300,
-                          "src": "622:3:10",
+                          "referencedDeclaration": 2318,
+                          "src": "622:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1895,
+                        "id": 285,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1530,7 +1530,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "622:10:10",
+                        "src": "622:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -1544,18 +1544,18 @@
                           "typeString": "address payable"
                         }
                       ],
-                      "id": 1893,
+                      "id": 283,
                       "name": "_addFarmer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1961,
-                      "src": "611:10:10",
+                      "referencedDeclaration": 351,
+                      "src": "611:10:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 1896,
+                    "id": 286,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1563,48 +1563,48 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "611:22:10",
+                    "src": "611:22:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1897,
+                  "id": 287,
                   "nodeType": "ExpressionStatement",
-                  "src": "611:22:10"
+                  "src": "611:22:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1899,
+            "id": 289,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1891,
+              "id": 281,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "595:2:10"
+              "src": "595:2:3"
             },
             "returnParameters": {
-              "id": 1892,
+              "id": 282,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "605:0:10"
+              "src": "605:0:3"
             },
-            "scope": 1978,
-            "src": "584:54:10",
+            "scope": 368,
+            "src": "584:54:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1910,
+              "id": 300,
               "nodeType": "Block",
-              "src": "745:87:10",
+              "src": "745:87:3",
               "statements": [
                 {
                   "expression": {
@@ -1617,18 +1617,18 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1903,
+                              "id": 293,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2300,
-                              "src": "768:3:10",
+                              "referencedDeclaration": 2318,
+                              "src": "768:3:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 1904,
+                            "id": 294,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1636,7 +1636,7 @@
                             "memberName": "sender",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": null,
-                            "src": "768:10:10",
+                            "src": "768:10:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address_payable",
                               "typeString": "address payable"
@@ -1650,18 +1650,18 @@
                               "typeString": "address payable"
                             }
                           ],
-                          "id": 1902,
+                          "id": 292,
                           "name": "isFarmer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1924,
-                          "src": "759:8:10",
+                          "referencedDeclaration": 314,
+                          "src": "759:8:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
                             "typeString": "function (address) view returns (bool)"
                           }
                         },
-                        "id": 1905,
+                        "id": 295,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1669,7 +1669,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "759:20:10",
+                        "src": "759:20:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1678,14 +1678,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "736f7272792c206d6573736167652073656e646572206973206e6f742061206661726d6572",
-                        "id": 1906,
+                        "id": 296,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "780:39:10",
+                        "src": "780:39:3",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_e535ade53d9780d89542db3d07a1ba1b0bd1515194b35cbc238cd10e44d616a7",
@@ -1705,21 +1705,21 @@
                           "typeString": "literal_string \"sorry, message sender is not a farmer\""
                         }
                       ],
-                      "id": 1901,
+                      "id": 291,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2303,
-                        2304
+                        2321,
+                        2322
                       ],
-                      "referencedDeclaration": 2304,
-                      "src": "751:7:10",
+                      "referencedDeclaration": 2322,
+                      "src": "751:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 1907,
+                    "id": 297,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1727,41 +1727,41 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "751:69:10",
+                    "src": "751:69:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1908,
+                  "id": 298,
                   "nodeType": "ExpressionStatement",
-                  "src": "751:69:10"
+                  "src": "751:69:3"
                 },
                 {
-                  "id": 1909,
+                  "id": 299,
                   "nodeType": "PlaceholderStatement",
-                  "src": "826:1:10"
+                  "src": "826:1:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1911,
+            "id": 301,
             "name": "onlyFarmer",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 1900,
+              "id": 290,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "742:2:10"
+              "src": "742:2:3"
             },
-            "src": "723:109:10",
+            "src": "723:109:3",
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 1923,
+              "id": 313,
               "nodeType": "Block",
-              "src": "951:38:10",
+              "src": "951:38:3",
               "statements": [
                 {
                   "expression": {
@@ -1769,12 +1769,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1920,
+                        "id": 310,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1913,
-                        "src": "976:7:10",
+                        "referencedDeclaration": 303,
+                        "src": "976:7:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1790,32 +1790,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1918,
+                        "id": 308,
                         "name": "farmers",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1890,
-                        "src": "964:7:10",
+                        "referencedDeclaration": 280,
+                        "src": "964:7:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Role_$2089_storage",
+                          "typeIdentifier": "t_struct$_Role_$2107_storage",
                           "typeString": "struct Roles.Role storage ref"
                         }
                       },
-                      "id": 1919,
+                      "id": 309,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "has",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2175,
-                      "src": "964:11:10",
+                      "referencedDeclaration": 2193,
+                      "src": "964:11:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_Role_$2089_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_Role_$2089_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Role_$2107_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_Role_$2107_storage_ptr_$",
                         "typeString": "function (struct Roles.Role storage pointer,address) view returns (bool)"
                       }
                     },
-                    "id": 1921,
+                    "id": 311,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1823,37 +1823,37 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "964:20:10",
+                    "src": "964:20:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 1917,
-                  "id": 1922,
+                  "functionReturnParameters": 307,
+                  "id": 312,
                   "nodeType": "Return",
-                  "src": "957:27:10"
+                  "src": "957:27:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1924,
+            "id": 314,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1914,
+              "id": 304,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1913,
+                  "id": 303,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1924,
-                  "src": "907:15:10",
+                  "scope": 314,
+                  "src": "907:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1861,10 +1861,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1912,
+                    "id": 302,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "907:7:10",
+                    "src": "907:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1875,19 +1875,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "906:17:10"
+              "src": "906:17:3"
             },
             "returnParameters": {
-              "id": 1917,
+              "id": 307,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1916,
+                  "id": 306,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1924,
-                  "src": "945:4:10",
+                  "scope": 314,
+                  "src": "945:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1895,10 +1895,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1915,
+                    "id": 305,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "945:4:10",
+                    "src": "945:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1908,19 +1908,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "944:6:10"
+              "src": "944:6:3"
             },
-            "scope": 1978,
-            "src": "889:100:10",
+            "scope": 368,
+            "src": "889:100:3",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1935,
+              "id": 325,
               "nodeType": "Block",
-              "src": "1102:30:10",
+              "src": "1102:30:3",
               "statements": [
                 {
                   "expression": {
@@ -1928,12 +1928,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1932,
+                        "id": 322,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1926,
-                        "src": "1119:7:10",
+                        "referencedDeclaration": 316,
+                        "src": "1119:7:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1947,18 +1947,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1931,
+                      "id": 321,
                       "name": "_addFarmer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1961,
-                      "src": "1108:10:10",
+                      "referencedDeclaration": 351,
+                      "src": "1108:10:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 1933,
+                    "id": 323,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1966,56 +1966,56 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1108:19:10",
+                    "src": "1108:19:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1934,
+                  "id": 324,
                   "nodeType": "ExpressionStatement",
-                  "src": "1108:19:10"
+                  "src": "1108:19:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1936,
+            "id": 326,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 1929,
+                "id": 319,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1928,
+                  "id": 318,
                   "name": "onlyFarmer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1911,
-                  "src": "1091:10:10",
+                  "referencedDeclaration": 301,
+                  "src": "1091:10:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1091:10:10"
+                "src": "1091:10:3"
               }
             ],
             "name": "addFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1927,
+              "id": 317,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1926,
+                  "id": 316,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1936,
-                  "src": "1067:15:10",
+                  "scope": 326,
+                  "src": "1067:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2023,10 +2023,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1925,
+                    "id": 315,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1067:7:10",
+                    "src": "1067:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2037,25 +2037,25 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1066:17:10"
+              "src": "1066:17:3"
             },
             "returnParameters": {
-              "id": 1930,
+              "id": 320,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1102:0:10"
+              "src": "1102:0:3"
             },
-            "scope": 1978,
-            "src": "1048:84:10",
+            "scope": 368,
+            "src": "1048:84:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1944,
+              "id": 334,
               "nodeType": "Block",
-              "src": "1231:36:10",
+              "src": "1231:36:3",
               "statements": [
                 {
                   "expression": {
@@ -2065,18 +2065,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1940,
+                          "id": 330,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2300,
-                          "src": "1251:3:10",
+                          "referencedDeclaration": 2318,
+                          "src": "1251:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1941,
+                        "id": 331,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2084,7 +2084,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "1251:10:10",
+                        "src": "1251:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -2098,18 +2098,18 @@
                           "typeString": "address payable"
                         }
                       ],
-                      "id": 1939,
+                      "id": 329,
                       "name": "_removeFarmer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1977,
-                      "src": "1237:13:10",
+                      "referencedDeclaration": 367,
+                      "src": "1237:13:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 1942,
+                    "id": 332,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2117,48 +2117,48 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1237:25:10",
+                    "src": "1237:25:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1943,
+                  "id": 333,
                   "nodeType": "ExpressionStatement",
-                  "src": "1237:25:10"
+                  "src": "1237:25:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1945,
+            "id": 335,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "renounceFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1937,
+              "id": 327,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1221:2:10"
+              "src": "1221:2:3"
             },
             "returnParameters": {
-              "id": 1938,
+              "id": 328,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1231:0:10"
+              "src": "1231:0:3"
             },
-            "scope": 1978,
-            "src": "1198:69:10",
+            "scope": 368,
+            "src": "1198:69:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1960,
+              "id": 350,
               "nodeType": "Block",
-              "src": "1403:62:10",
+              "src": "1403:62:3",
               "statements": [
                 {
                   "expression": {
@@ -2166,12 +2166,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1953,
+                        "id": 343,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1947,
-                        "src": "1421:7:10",
+                        "referencedDeclaration": 337,
+                        "src": "1421:7:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -2187,32 +2187,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1950,
+                        "id": 340,
                         "name": "farmers",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1890,
-                        "src": "1409:7:10",
+                        "referencedDeclaration": 280,
+                        "src": "1409:7:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Role_$2089_storage",
+                          "typeIdentifier": "t_struct$_Role_$2107_storage",
                           "typeString": "struct Roles.Role storage ref"
                         }
                       },
-                      "id": 1952,
+                      "id": 342,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2121,
-                      "src": "1409:11:10",
+                      "referencedDeclaration": 2139,
+                      "src": "1409:11:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2089_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2089_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2107_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2107_storage_ptr_$",
                         "typeString": "function (struct Roles.Role storage pointer,address)"
                       }
                     },
-                    "id": 1954,
+                    "id": 344,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2220,15 +2220,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1409:20:10",
+                    "src": "1409:20:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1955,
+                  "id": 345,
                   "nodeType": "ExpressionStatement",
-                  "src": "1409:20:10"
+                  "src": "1409:20:3"
                 },
                 {
                   "eventCall": {
@@ -2236,12 +2236,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1957,
+                        "id": 347,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1947,
-                        "src": "1452:7:10",
+                        "referencedDeclaration": 337,
+                        "src": "1452:7:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -2255,18 +2255,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1956,
+                      "id": 346,
                       "name": "FarmerAdded",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1884,
-                      "src": "1440:11:10",
+                      "referencedDeclaration": 274,
+                      "src": "1440:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 1958,
+                    "id": 348,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2274,36 +2274,36 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1440:20:10",
+                    "src": "1440:20:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1959,
+                  "id": 349,
                   "nodeType": "EmitStatement",
-                  "src": "1435:25:10"
+                  "src": "1435:25:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1961,
+            "id": 351,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_addFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1948,
+              "id": 338,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1947,
+                  "id": 337,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1961,
-                  "src": "1377:15:10",
+                  "scope": 351,
+                  "src": "1377:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2311,10 +2311,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1946,
+                    "id": 336,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1377:7:10",
+                    "src": "1377:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2325,25 +2325,25 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1376:17:10"
+              "src": "1376:17:3"
             },
             "returnParameters": {
-              "id": 1949,
+              "id": 339,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1403:0:10"
+              "src": "1403:0:3"
             },
-            "scope": 1978,
-            "src": "1357:108:10",
+            "scope": 368,
+            "src": "1357:108:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 1976,
+              "id": 366,
               "nodeType": "Block",
-              "src": "1613:67:10",
+              "src": "1613:67:3",
               "statements": [
                 {
                   "expression": {
@@ -2351,12 +2351,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1969,
+                        "id": 359,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1963,
-                        "src": "1634:7:10",
+                        "referencedDeclaration": 353,
+                        "src": "1634:7:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -2372,32 +2372,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1966,
+                        "id": 356,
                         "name": "farmers",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1890,
-                        "src": "1619:7:10",
+                        "referencedDeclaration": 280,
+                        "src": "1619:7:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Role_$2089_storage",
+                          "typeIdentifier": "t_struct$_Role_$2107_storage",
                           "typeString": "struct Roles.Role storage ref"
                         }
                       },
-                      "id": 1968,
+                      "id": 358,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "remove",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2152,
-                      "src": "1619:14:10",
+                      "referencedDeclaration": 2170,
+                      "src": "1619:14:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2089_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2089_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2107_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2107_storage_ptr_$",
                         "typeString": "function (struct Roles.Role storage pointer,address)"
                       }
                     },
-                    "id": 1970,
+                    "id": 360,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2405,15 +2405,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1619:23:10",
+                    "src": "1619:23:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1971,
+                  "id": 361,
                   "nodeType": "ExpressionStatement",
-                  "src": "1619:23:10"
+                  "src": "1619:23:3"
                 },
                 {
                   "eventCall": {
@@ -2421,12 +2421,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1973,
+                        "id": 363,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1963,
-                        "src": "1667:7:10",
+                        "referencedDeclaration": 353,
+                        "src": "1667:7:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -2440,18 +2440,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1972,
+                      "id": 362,
                       "name": "FarmerRemoved",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1888,
-                      "src": "1653:13:10",
+                      "referencedDeclaration": 278,
+                      "src": "1653:13:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 1974,
+                    "id": 364,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2459,36 +2459,36 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1653:22:10",
+                    "src": "1653:22:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1975,
+                  "id": 365,
                   "nodeType": "EmitStatement",
-                  "src": "1648:27:10"
+                  "src": "1648:27:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 1977,
+            "id": 367,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_removeFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1964,
+              "id": 354,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1963,
+                  "id": 353,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1977,
-                  "src": "1587:15:10",
+                  "scope": 367,
+                  "src": "1587:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2496,10 +2496,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1962,
+                    "id": 352,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1587:7:10",
+                    "src": "1587:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2510,41 +2510,41 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1586:17:10"
+              "src": "1586:17:3"
             },
             "returnParameters": {
-              "id": 1965,
+              "id": 355,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1613:0:10"
+              "src": "1613:0:3"
             },
-            "scope": 1978,
-            "src": "1564:116:10",
+            "scope": 368,
+            "src": "1564:116:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1979,
-        "src": "181:1501:10"
+        "scope": 369,
+        "src": "181:1501:3"
       }
     ],
-    "src": "0:1682:10"
+    "src": "0:1682:3"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {
-    "5777": {
+    "4": {
       "events": {},
       "links": {},
-      "address": "0xf2ee0b0Cdcae5013930B92c0Ba54F7F7f1933613",
-      "transactionHash": "0x2410b81c806fbab1dd940630da000faaf33d38a4d64c397325341f124470054e"
+      "address": "0x4a7F85928B6ca84e5ca0D6c6f6a717C5902F34CB",
+      "transactionHash": "0x7ff1280fd4d6c053faeb7f8dfd130b5282a8bc28aa9a471aef3888a8486ee0bf"
     }
   },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-05-25T09:20:25.047Z",
+  "updatedAt": "2019-05-25T12:23:14.264Z",
   "devdoc": {
     "methods": {}
   },
